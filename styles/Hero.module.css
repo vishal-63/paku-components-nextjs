@@ -1,0 +1,9 @@
+.slide {
+  transform: translateX(100%);
+  transition: all 1s ease;
+}
+
+.slide.active {
+  transition: all 1s ease;
+  transform: translate(0);
+}

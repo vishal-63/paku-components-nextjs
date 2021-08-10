@@ -1,0 +1,23 @@
+.brand__img {
+  max-width: 200px !important;
+  max-height: 100px !important;
+  transition: all 0.25s ease;
+}
+
+.brand__img:hover {
+  transition: all 0.25s ease;
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .brand__img {
+    max-width: 150px !important;
+  }
+}
+
+/* @media (max-width: 540px) {
+  .brand__img {
+    width: 100px;
+    height: 100px;
+  }
+} */
