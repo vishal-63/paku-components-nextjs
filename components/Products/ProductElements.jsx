@@ -32,6 +32,7 @@ export const ProductCardSection = styled.div`
   max-width: 1000px;
   padding-bottom: 30px;
   justify-content: center;
+  cursor: grab;
 
   @media (max-width: 900px) {
     grid-template-columns: repeat(3, auto);

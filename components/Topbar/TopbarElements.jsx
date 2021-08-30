@@ -16,8 +16,8 @@ export const TopbarContent = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  color: #efefef;
-  border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
+  color: ${(props) => props.color};
+  border-bottom: 0.1px solid ${(props) => props.border};
 `;
 
 export const TopbarWrapper = styled.div`
@@ -27,8 +27,8 @@ export const TopbarWrapper = styled.div`
   font-size: 14px;
   padding: 0 20px;
   height: 100%;
-  border-left: 0.1px solid rgba(255, 255, 255, 0.2);
-  border-right: 0.1px solid rgba(255, 255, 255, 0.2);
+  border-left: 0.1px solid ${(props) => props.border};
+  border-right: 0.1px solid ${(props) => props.border};
   z-index: 20;
 
   &:nth-child(1) {

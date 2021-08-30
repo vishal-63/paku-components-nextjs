@@ -1,8 +1,11 @@
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { createGlobalStyle } from "styled-components";
 import Layout from "../components/Layout";
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import BeatLoader from "react-spinners/BeatLoader";
+import LoaderStyles from "../styles/Loader.module.css";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -25,6 +28,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  box-shadow: none;
 }
 
 
@@ -71,21 +75,71 @@ a {
 }
 `;
 
+const loadingScreen = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "#fff",
+  transition: "all 0.4s ease-out",
+};
+
 function MyApp({ Component, pageProps }) {
+  const [loading, setLoading] = useState(false);
+
+  const router = useRouter();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
       ease: "ease-in-sine",
     });
-  }, []);
+
+    const handleStart = () => setLoading(true);
+    const handleComplete = () => setLoading(false);
+    const handleError = () => console.log("error occurred");
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleError);
+
+    return () => {
+      router.events.on("routeChangeStart", handleStart);
+      router.events.on("routeChangeComplete", handleComplete);
+      router.events.on("routeChangeError", handleError);
+    };
+  }, [router]);
+
+  if (router.pathname.endsWith("/")) {
+    return (
+      <>
+        <GlobalStyle />
+        {loading ? (
+          <div className={LoaderStyles.loader}>
+            <BeatLoader size={20} color={"#00194f"} css={loadingScreen} />
+          </div>
+        ) : (
+          <Layout color="#efefef" border="rgba(255, 255, 255, 0.2)">
+            <Component {...pageProps} />
+          </Layout>
+        )}
+      </>
+    );
+  }
 
   return (
     <>
       <GlobalStyle />
-
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {loading ? (
+        <div className={LoaderStyles.loader}>
+          <BeatLoader size={20} color={"#00194f"} css={loadingScreen} />
+        </div>
+      ) : (
+        <Layout color="#121212" border="#343434aa">
+          <Component {...pageProps} />
+        </Layout>
+      )}
     </>
   );
 }

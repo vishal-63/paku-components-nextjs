@@ -7,18 +7,18 @@ import {
   TopbarWrapper,
 } from "./TopbarElements";
 
-const Topbar = () => {
+const Topbar = ({ color, border }) => {
   return (
     <TopbarContainer>
-      <TopbarContent>
-        <TopbarWrapper>
+      <TopbarContent color={color} border={border}>
+        <TopbarWrapper border={border}>
           <TopbarIcons>
             <FiPhone />
           </TopbarIcons>
           <TopbarText>+91-8197302228</TopbarText>
           <TopbarText>+91-9023548954</TopbarText>
         </TopbarWrapper>
-        <TopbarWrapper>
+        <TopbarWrapper border={border}>
           <TopbarIcons>
             <FiMail />
           </TopbarIcons>

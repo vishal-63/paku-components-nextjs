@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Topbar from "../../components/Topbar";
 
-const Nav = () => {
+const Nav = ({ color, border }) => {
   return (
     <>
-      <Topbar />
+      <Topbar color={color} border={border} />
       <Navbar />
     </>
   );
