@@ -101,7 +101,7 @@ const BlogAside = () => {
               <PostDate>24</PostDate>
               <PostMonth>MAY</PostMonth>
             </PostDay>
-            <Link href="/blog/1">
+            <Link href="/blog/1" passHref>
               <PostTitle>
                 Market Research Tips For Small Business Owners
               </PostTitle>
@@ -118,7 +118,7 @@ const BlogAside = () => {
               <PostDate>12</PostDate>
               <PostMonth>MAY</PostMonth>
             </PostDay>
-            <Link href="/blog/2">
+            <Link href="/blog/2" passHref>
               <PostTitle>Implementing Digital Transformation</PostTitle>
             </Link>
           </li>
@@ -133,7 +133,7 @@ const BlogAside = () => {
               <PostDate>03</PostDate>
               <PostMonth>MAY</PostMonth>
             </PostDay>
-            <Link href="/blog/3">
+            <Link href="/blog/3" passHref>
               <PostTitle>Achieving Effective Brand Management</PostTitle>
             </Link>
           </li>
