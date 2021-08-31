@@ -20,16 +20,16 @@ const Herosection = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+  // const nextSlide = () => {
+  //   setCurrent(current === length - 1 ? 0 : current + 1);
+  // };
 
-  useEffect(() => {
-    const Interval = setInterval(nextSlide, 9000);
-    return () => {
-      clearInterval(Interval);
-    };
-  }, [nextSlide]);
+  // useEffect(() => {
+  //   const Interval = setInterval(nextSlide, 9000);
+  //   return () => {
+  //     clearInterval(Interval);
+  //   };
+  // }, [nextSlide]);
 
   const changeSlide = (index) => {
     setCurrent(index);
@@ -71,8 +71,11 @@ const Herosection = ({ slides }) => {
             {index === current && (
               <HeroSlide key={index}>
                 <HeroImage
-                  src={slide.image.src}
+                  src={slide.image}
                   alt="Background Image Slider"
+                  layout="intrinsic"
+                  quality={100}
+                  priority="true"
                 />
                 <HeroText>
                   <HeroHeading>{slide.heading}</HeroHeading>

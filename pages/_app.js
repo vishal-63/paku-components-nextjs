@@ -44,7 +44,7 @@ a {
   max-width: 1000px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 10240px) {
   .swiper-container {
     max-width: 85vw;
   }

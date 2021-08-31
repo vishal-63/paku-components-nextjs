@@ -14,7 +14,7 @@ export const UspCardsWrapper = styled.div`
   grid-template-columns: auto auto auto;
   grid-gap: 2rem;
 
-  @media (max-width: 540px) {
+  @media (max-width: 767px) {
     grid-template-columns: auto;
   }
 `;

@@ -34,7 +34,7 @@ export const ProductCardSection = styled.div`
   justify-content: center;
   cursor: grab;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(3, auto);
     row-gap: 2rem;
     max-width: 85vw;
