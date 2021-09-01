@@ -44,7 +44,7 @@ const blogs = ({ bloglist }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/blogs`);
   const bloglist = await res.json();
 

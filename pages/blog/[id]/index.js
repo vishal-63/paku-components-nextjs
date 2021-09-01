@@ -54,7 +54,7 @@ const blog = ({ blog }) => {
 
 export default blog;
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const res = await fetch(`${server}/api/blogs/${context.params.id}`);
   const blog = await res.json();
 
@@ -65,16 +65,16 @@ export const getServerSideProps = async (context) => {
   };
 };
 
-// export const getStaticPaths = async () => {
-//   const res = await fetch(`${server}/api/blogs`);
-//   const blogs = await res.json();
-//   const ids = blogs.map((blog) => blog.id);
-//   const paths = ids.map((id) => ({
-//     params: { id: id.toString() },
-//   }));
+export const getStaticPaths = async () => {
+  const res = await fetch(`${server}/api/blogs`);
+  const blogs = await res.json();
+  const ids = blogs.map((blog) => blog.id);
+  const paths = ids.map((id) => ({
+    params: { id: id.toString() },
+  }));
 
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
+  return {
+    paths,
+    fallback: false,
+  };
+};
