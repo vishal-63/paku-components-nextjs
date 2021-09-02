@@ -11,9 +11,9 @@ import {
 } from "./BlogItemElements";
 import { BiCalendarAlt, BiMessageAlt } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
-import blog1 from "../../assets/images/blog-1.jpg";
-import blog2 from "../../assets/images/blog-2.webp";
-import blog3 from "../../assets/images/blog-3.jpg";
+// import blog1 from "../../assets/images/blog-1.jpg";
+// import blog2 from "../../assets/images/blog-2.webp";
+// import blog3 from "../../assets/images/blog-3.jpg";
 
 const BlogItem = ({ blog }) => {
   return (

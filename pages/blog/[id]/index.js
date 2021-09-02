@@ -1,4 +1,5 @@
 import { server } from "../../../config";
+import Meta from "../../../components/Meta";
 import Blog from "../../../components/Blog Article";
 import styled from "styled-components";
 import BlogAside from "../../../components/Blog Aside";
@@ -40,15 +41,24 @@ const blog = ({ blog }) => {
   ];
 
   return (
-    <main>
-      <Header title={blog.title} pages={pages} page="Blog Post" bgImg={bgImg} />
-      <BlogPageContainer>
-        <BlogLayout>
-          <Blog blog={blog} />
-          <BlogAside />
-        </BlogLayout>
-      </BlogPageContainer>
-    </main>
+    <>
+      <Meta title={blog.title} />
+
+      <main>
+        <Header
+          title={blog.title}
+          pages={pages}
+          page="Blog Post"
+          bgImg={bgImg}
+        />
+        <BlogPageContainer>
+          <BlogLayout>
+            <Blog blog={blog} />
+            <BlogAside />
+          </BlogLayout>
+        </BlogPageContainer>
+      </main>
+    </>
   );
 };
 
