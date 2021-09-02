@@ -1,10 +1,10 @@
+import Image from "next/image";
 import {
   Container,
   TeamTitle,
   TeamWrapper,
   MemberCard,
   MemberDiv,
-  MemberImage,
   MemberName,
   MemberPosition,
   SocialLink,
@@ -27,7 +27,7 @@ const Team = () => {
       <TeamWrapper data-aos="fade-up">
         <MemberCard>
           <MemberDiv>
-            <MemberImage src={team1.src} alt="team-member-1"></MemberImage>
+            <Image src={team1} alt="team-member-1" layout="intrinsic" />
             <MemberName>Jeet Shah</MemberName>
             <MemberPosition>Director</MemberPosition>
             <SocialLinkWrapper>
@@ -48,7 +48,7 @@ const Team = () => {
         </MemberCard>
         <MemberCard>
           <MemberDiv>
-            <MemberImage src={team2.src} alt="team-member-2"></MemberImage>
+            <Image src={team2} alt="team-member-2" layout="intrinsic" />
             <MemberName>Lalit Shah</MemberName>
             <MemberPosition>CEO & Founder</MemberPosition>
             <SocialLinkWrapper>
@@ -69,7 +69,7 @@ const Team = () => {
         </MemberCard>
         <MemberCard>
           <MemberDiv>
-            <MemberImage src={team3.src} alt="team-member-3"></MemberImage>
+            <Image src={team3} alt="team-member-3" layout="intrinsic" />
             <MemberName>Vishal Shah</MemberName>
             <MemberPosition>Director</MemberPosition>
             <SocialLinkWrapper>

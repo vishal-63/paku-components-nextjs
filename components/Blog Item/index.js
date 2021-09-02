@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   BlogArticle,
   BlogArticleInfo,
@@ -15,7 +16,6 @@ import blog2 from "../../assets/images/blog-2.webp";
 import blog3 from "../../assets/images/blog-3.jpg";
 
 const BlogItem = ({ blog }) => {
-  console.log(blog.id);
   return (
     <Link
       href="/blog/[id]"
@@ -51,7 +51,7 @@ const BlogItem = ({ blog }) => {
         </BlogArticleInfo>
         <div style={{ overflow: "hidden", width: "100%", height: "100%" }}>
           <BlogImg>
-            <img src={blog.img} alt={blog.imgAlt} />
+            <Image src={blog.img} alt={blog.imgAlt} layout="intrinsic" />
           </BlogImg>
         </div>
       </BlogArticle>

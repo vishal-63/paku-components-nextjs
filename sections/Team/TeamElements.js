@@ -60,16 +60,6 @@ export const MemberDiv = styled.div`
   transition: all 0.3s ease-in-out;
 `;
 
-export const MemberImage = styled.img`
-  max-height: 13.125rem;
-  width: auto;
-  height: auto;
-
-  @media (min-width: 768px) and (max-width: 900px) {
-    max-height: 10rem;
-  }
-`;
-
 export const MemberName = styled.h3`
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;

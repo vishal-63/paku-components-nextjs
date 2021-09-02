@@ -46,12 +46,6 @@ export const NavTitle = styled.span`
   /* transform: translateY(10px); */
 `;
 
-export const NavLogo = styled.img`
-  width: 100px;
-  height: 100px;
-  transform: translateY(-5%);
-`;
-
 export const MobileIcon = styled.div`
   height: 50%;
   transition: 0.3s all ease-in-out;

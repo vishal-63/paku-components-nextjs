@@ -25,7 +25,7 @@ export const ProductCardsWrapper = styled.div`
 export const ProductCardSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
-  column-gap: 2rem;
+  gap: 2rem;
   align-items: center;
   margin-top: 2rem;
   align-items: center;
@@ -34,9 +34,7 @@ export const ProductCardSection = styled.div`
   justify-content: center;
   cursor: grab;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, auto);
-    row-gap: 2rem;
+  @media (max-width: 900px) {
     max-width: 85vw;
   }
 
@@ -75,6 +73,10 @@ export const ProductCard = styled.div`
   &:hover::after {
     transform: translateX(0);
   }
+
+  @media (max-width: 900px) and (min-width: 540px) {
+    width: 200px;
+  }
 `;
 
 export const ProductCardTitle = styled.h3`
@@ -90,6 +92,10 @@ export const ProductCardImgWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 1rem 0 0;
+
+  @media (max-width: 900px) and (min-width: 540px) {
+    height: 150px;
+  }
 `;
 
 export const ProductCardLink = styled.div`

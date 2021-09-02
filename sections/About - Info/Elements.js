@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  padding: 3.125rem 0;
+  padding: 3.125rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,21 +11,7 @@ export const Container = styled.div`
   @media (min-width: 900px) {
     flex-direction: row;
     align-items: flex-start;
-    padding: 6.25rem 0;
-  }
-`;
-
-export const InfoImg = styled.img`
-  max-width: 80vw;
-  width: auto;
-  height: auto;
-
-  @media (min-width: 900px) {
-    max-width: 450px;
-  }
-
-  @media (min-width: 1100px) {
-    max-width: 37.5rem;
+    padding: 6.25rem 2rem;
   }
 `;
 

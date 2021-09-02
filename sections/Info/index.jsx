@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Image from "next/image";
 import img from "../../assets/images/car.svg";
 import {
   InfoContainer,
@@ -7,7 +8,6 @@ import {
   InfoText,
   InfoList,
   InfoListItems,
-  InfoImg,
 } from "./InfoElements";
 import { Title } from "../../components/Titles";
 import Products from "../../components/Products";
@@ -41,7 +41,14 @@ class Infosection extends Component {
               </Btn>
             </InfoText>
           </InfoContent>
-          <InfoImg src={img.src} alt="Car Illustration" data-aos-delay="200" />
+          <Image
+            src={img}
+            alt="Car Illustration"
+            data-aos-delay="200"
+            layout="intrinsic"
+            width={500}
+            height={300}
+          />
         </InfoWrapper>
 
         <Products />

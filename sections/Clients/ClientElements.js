@@ -68,16 +68,6 @@ export const ClientHeader = styled.div`
   }
 `;
 
-export const ClientImg = styled.img`
-  max-width: 70px;
-  width: auto;
-  height: auto;
-
-  @media (min-width: 768px) {
-    max-width: 112px;
-  }
-`;
-
 export const ClientInfo = styled.div`
   display: flex;
   flex-direction: column;

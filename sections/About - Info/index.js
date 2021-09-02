@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Image from "next/image";
 import {
   Container,
-  InfoImg,
   InfoWrapper,
   InfoSectionButton,
   ButtonContainer,
@@ -57,7 +57,7 @@ const AboutInfo = () => {
 
   return (
     <Container data-aos="fade-up">
-      <InfoImg src={infoImg.src} alt="about-info" />
+      <Image src={infoImg} alt="About Info" layout="intrinsic" />
       <InfoWrapper>
         <ButtonContainer>
           <InfoSectionButton

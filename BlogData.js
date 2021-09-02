@@ -2,9 +2,9 @@ import blog1 from "/assets/images/blog-1.jpg";
 import blog2 from "/assets/images/blog-2.webp";
 import blog3 from "/assets/images/blog-3.jpg";
 
-const img1 = blog1.src;
-const img2 = blog2.src;
-const img3 = blog3.src;
+const img1 = blog1;
+const img2 = blog2;
+const img3 = blog3;
 
 export const blogs = [
   {

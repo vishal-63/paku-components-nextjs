@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   BlogContainer,
   ArticleContainer,
@@ -31,7 +32,6 @@ import {
 } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
 import { AsideBoxTitle } from "../Blog Aside/BlogAsideElements.js";
-import link from "next/link";
 
 const Blog = ({ blog }) => {
   return (
@@ -65,10 +65,11 @@ const Blog = ({ blog }) => {
         </ArticleDateContainer>
         <ArticleTitle>{blog.title}</ArticleTitle>
         <ArticlePara>{blog.para1}</ArticlePara>
-        <img
+        <Image
           src={blog.img}
           alt="small business"
           style={{ marginTop: "2.25rem", width: "100%" }}
+          layout="intrinsic"
         />
         <ArticlePara>{blog.para2}</ArticlePara>
         <QuoteContainer>
@@ -124,10 +125,11 @@ const Blog = ({ blog }) => {
         <RecentPostWrapper>
           <Link href="/blog/[id]" as={`/blog/${blog.recentPost1}`}>
             <RecentPost to={blog.recentPost1}>
-              <img
+              <Image
                 src={blog.recentPost1Img}
                 alt="blog-1"
                 style={{ maxWidth: "100%", cursor: "pointer" }}
+                layout="intrinsic"
               />
               <RecentPostTitle>{blog.recentPost1Title}</RecentPostTitle>
               <ArticleHeader>
@@ -156,10 +158,11 @@ const Blog = ({ blog }) => {
           </Link>
           <Link href="/blog/[id]" as={`/blog/${blog.recentPost2}`}>
             <RecentPost to={blog.recentPost2}>
-              <img
+              <Image
                 src={blog.recentPost2Img}
                 alt="blog-2"
                 style={{ maxWidth: "100%", cursor: "pointer" }}
+                layout="intrinsic"
               />
               <RecentPostTitle>{blog.recentPost2Title}</RecentPostTitle>
               <ArticleHeader>

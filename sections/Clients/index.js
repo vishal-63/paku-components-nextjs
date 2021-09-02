@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Container,
   ClientCard,
@@ -23,7 +24,7 @@ const Clients = () => {
       <ClientWrapper data-aos="fade-up">
         <ClientCard>
           <ClientHeader>
-            <ClientImg src={client1.src} alt="Client Image" />
+            <Image src={client1} alt="Client Image" layout="intrinsic" />
             <ClientInfo>
               <ClientName>Sam Wilson</ClientName>
               <ClientSubtitle>CEO "Manstep"</ClientSubtitle>
@@ -44,7 +45,7 @@ const Clients = () => {
 
         <ClientCard>
           <ClientHeader>
-            <ClientImg src={client2.src} alt="Client Image" />
+            <Image src={client2} alt="Client Image" layout="intrinsic" />
             <ClientInfo>
               <ClientName>Michelle Johnson</ClientName>
               <ClientSubtitle>CEO "WorkForce"</ClientSubtitle>

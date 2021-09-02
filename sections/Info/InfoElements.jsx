@@ -25,6 +25,7 @@ export const InfoWrapper = styled.div`
     padding: 1rem 1.75rem;
     margin-top: 30px;
     flex-direction: column;
+    gap: 4rem;
   }
 `;
 
@@ -35,6 +36,10 @@ export const InfoContent = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+
+  @media (min-width: 900px) {
+    max-width: 60%;
+  }
 `;
 
 export const InfoText = styled.div`
@@ -61,16 +66,4 @@ export const InfoListItems = styled.li`
   margin-top: 0.5rem;
   padding-left: 1.25rem;
   vertical-align: center;
-`;
-
-export const InfoImg = styled.img`
-  margin-left: 20px;
-  width: 500px;
-  position: relative;
-
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    max-height: 350px;
-    margin-top: 30px;
-  }
 `;

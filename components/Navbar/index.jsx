@@ -8,7 +8,6 @@ import {
   NavbarContainer,
   NavWrapper,
   NavTitle,
-  NavLogo,
   NavMenu,
   NavLinks,
   MobileIcon,
