@@ -19,7 +19,7 @@ export const ContactSectionWrapper = styled.div`
   margin-top: 2rem;
   width: calc(100vw - 50px);
 
-  @media (max-width: 540px) {
+  @media (max-width: 767px) {
     flex-direction: column;
     width: 90%;
   }

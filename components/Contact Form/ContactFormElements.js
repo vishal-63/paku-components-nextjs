@@ -12,7 +12,7 @@ export const ContactFormWrapper = styled.div`
     }
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 767px) {
     width: 100%;
   }
 `;

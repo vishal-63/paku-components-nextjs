@@ -8,7 +8,7 @@ export const Title = styled.h3`
   color: #01194f;
   text-align: center;
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 767px) {
     font-size: 28px;
   }
 

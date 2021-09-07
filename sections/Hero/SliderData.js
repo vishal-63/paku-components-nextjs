@@ -5,20 +5,18 @@ import img3 from "../../assets/images/banner 3.jpg";
 export const SliderData = [
   {
     image: img1,
-    heading: "LOREM IPSUM",
-    subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ipsa",
+    heading: "Passion For Commitment",
+    subtitle: "Passionate People who excels in delivering the commitment.",
   },
   {
     image: img2,
-    heading: "LOREM IPSUM",
-    subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ipsa",
+    heading: "Customer-Driven Focus",
+    subtitle: "Keeping Customer's requirements at the centre of the goal.",
   },
   {
     image: img3,
-    heading: "LOREM IPSUM",
+    heading: "High-Quality Products",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ipsa",
+      "Products with the top notch quality for best consumer experience from various brands.",
   },
 ];

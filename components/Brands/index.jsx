@@ -20,8 +20,7 @@ class Brands extends Component {
         <div data-aos="fade-up">
           <Title>Our Partners</Title>
           <Subtitle>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-            quasi!
+            The Brands we have partnered to provide BEST Quality Products
           </Subtitle>
 
           <BrandsWrapper>

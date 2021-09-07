@@ -10,8 +10,10 @@ import {
 } from "./ProductElements";
 import img1 from "../../assets/images/radiator.jpg";
 import img2 from "../../assets/images/core.jpg";
-import img3 from "../../assets/images/condenser.png";
-import img4 from "../../assets/images/intercooler.jpg";
+import img3 from "../../assets/images/top-bottom.png";
+import img4 from "../../assets/images/condenser.png";
+import img5 from "../../assets/images/intercooler.jpg";
+import img6 from "../../assets/images/fan-assembly.png";
 import { Title, Subtitle } from "../Titles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
@@ -37,7 +39,7 @@ class Products extends Component {
                   <ProductCardImgWrapper>
                     <Image
                       src={img1}
-                      alt="radiator"
+                      alt="Radiator"
                       effect="opacity"
                       style={{ maxHeight: "200px", maxWidth: "200px" }}
                     ></Image>
@@ -50,7 +52,7 @@ class Products extends Component {
                   <ProductCardImgWrapper>
                     <Image
                       src={img2}
-                      alt="core"
+                      alt="Radiator core"
                       effect="opacity"
                       style={{ maxHeight: "200px", maxWidth: "200px" }}
                     ></Image>
@@ -65,12 +67,12 @@ class Products extends Component {
                   <ProductCardImgWrapper>
                     <Image
                       src={img3}
-                      alt="condenser"
+                      alt="Radiator Top-Bottom Tanks"
                       effect="opacity"
                       style={{ maxHeight: "200px", maxWidth: "200px" }}
                     ></Image>
                   </ProductCardImgWrapper>
-                  <ProductCardTitle>Condenser</ProductCardTitle>
+                  <ProductCardTitle>Top-Bottom</ProductCardTitle>
                   <ProductCardLink>
                     <Link href="/"> Show More</Link>
                   </ProductCardLink>
@@ -84,12 +86,12 @@ class Products extends Component {
                   <ProductCardImgWrapper>
                     <Image
                       src={img4}
-                      alt="intercooler"
+                      alt="Radiator Condenser"
                       effect="opacity"
                       style={{ maxHeight: "200px", maxWidth: "200px" }}
                     ></Image>
                   </ProductCardImgWrapper>
-                  <ProductCardTitle>Intercooler</ProductCardTitle>
+                  <ProductCardTitle>Condenser</ProductCardTitle>
                   <ProductCardLink>
                     <Link href="/"> Show More</Link>
                   </ProductCardLink>
@@ -97,13 +99,13 @@ class Products extends Component {
                 <ProductCard data-aos="flip-right">
                   <ProductCardImgWrapper>
                     <Image
-                      src={img4}
-                      alt="intercooler"
+                      src={img5}
+                      alt="Radiator Cooler"
                       effect="opacity"
                       style={{ maxHeight: "200px", maxWidth: "200px" }}
                     ></Image>
                   </ProductCardImgWrapper>
-                  <ProductCardTitle>Intercooler</ProductCardTitle>
+                  <ProductCardTitle>Cooler</ProductCardTitle>
                   <ProductCardLink>
                     <Link href="/"> Show More</Link>
                   </ProductCardLink>
@@ -111,13 +113,13 @@ class Products extends Component {
                 <ProductCard data-aos="flip-right">
                   <ProductCardImgWrapper>
                     <Image
-                      src={img4}
-                      alt="intercooler"
+                      src={img6}
+                      alt="Radiator Fan Assembly"
                       effect="opacity"
                       style={{ maxHeight: "200px", maxWidth: "200px" }}
                     ></Image>
                   </ProductCardImgWrapper>
-                  <ProductCardTitle>Intercooler</ProductCardTitle>
+                  <ProductCardTitle>Fan Assembly</ProductCardTitle>
                   <ProductCardLink>
                     <Link href="/"> Show More</Link>
                   </ProductCardLink>

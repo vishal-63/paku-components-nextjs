@@ -29,8 +29,8 @@ class UspCards extends Component {
             </UspCardIcon>
             <UspCardTitle>Wide Range of Products</UspCardTitle>
             <UspCardText>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
-              sapiente nam repellendus fugit modi quod!
+              Covering a wide range of products from Car Segment, Commercial
+              Sector to Indusctrial Sector.
             </UspCardText>
           </UspCard>
 
@@ -38,10 +38,10 @@ class UspCards extends Component {
             <UspCardIcon>
               <BiRupee />
             </UspCardIcon>
-            <UspCardTitle>Best Price</UspCardTitle>
+            <UspCardTitle>Sensible Pricing</UspCardTitle>
             <UspCardText>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
-              sapiente nam repellendus fugit modi quod!
+              One of the most affordable pricing structure that our consumer
+              never have to worry about.
             </UspCardText>
           </UspCard>
 
@@ -49,10 +49,10 @@ class UspCards extends Component {
             <UspCardIcon>
               <BsStar />
             </UspCardIcon>
-            <UspCardTitle>Professional Experience</UspCardTitle>
+            <UspCardTitle>30 Years of Experience</UspCardTitle>
             <UspCardText>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores
-              sapiente nam repellendus fugit modi quod!
+              Every Know-How of the business known with over 30 years of
+              Experience
             </UspCardText>
           </UspCard>
         </UspCardsWrapper>

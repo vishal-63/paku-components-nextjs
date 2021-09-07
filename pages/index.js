@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Meta from "../components/Meta";
 import Herosection from "../sections/Hero";
 import { SliderData } from "../sections/Hero/SliderData";
