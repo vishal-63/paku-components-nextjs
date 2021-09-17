@@ -29,25 +29,25 @@ const AboutInfo = () => {
 
   const InfoData = [
     {
-      heading: "High-Quality Business Solutions",
+      heading: "Radiator Suppliers",
       para1:
-        "Generic is a business consulting company with more than 10 years of experience in the industry offering reliable and affordable services.",
+        "Being a Supplier of Radiators and their related components, we at PAKU Components deliver best quality products, covering whole range of products like Aluminium Radiators, Aluminium Radiator Cores, Intercoolers, Fibre Top-Bottoms, Condensors, Oil Coolers, Fan Motor Assemblies and much more.",
       para2:
-        "We serve clients at every level of their organization, in whatever capacity we can be most useful, whether as a trusted advisor to top management or as a hands-on coach for front line employees. For every engagement, we assemble a team with the most appropriate experience and expertise.",
+        "The Brands of products we mainly deal with, to supply best quality products include Cougar, Banco India, and Akshay Industries.",
     },
     {
-      heading: "Providing Full Business Support",
+      heading: "Providing Best Quality",
       para1:
-        "Generic offers advice and support to leading companies in various industries across the USA. We staff and manage your projects with our experts.",
+        "Providing Best Quality products and fulfilling our clients’ demands is the sole mission of our company. And we have been successful in achieving this mission for over 3 decades now. And this experience has helped us to anticipate and adapt to market changes before anyone else.",
       para2:
-        "We are successful because of our people, the quality of our expert network and our flexibility to anticipate market changes and adapt to your needs. That is why we continuously invest in the education and coaching of our consultants and our team of recruiters and account managers.",
+        "Still, we are open to learn and experience new things every day. That is what makes us different from the others.",
     },
     {
       heading: "Building Business Relationships",
       para1:
-        "We aim to build a strong mutual business relationship with our clients and contribute to their success by responding to their needs.",
+        "We aim to achieve strong and healthy business relationships by serving our clients and helping in their success by responding to their demands. ",
       para2:
-        "Our goal is not to become the largest consultancy agency but to be the agency known for the outstanding and lasting results we achieve with our clients. We work to support you on all stages of your business’s development and to help you avoid unpleasant management experiences.",
+        "We do not aim to be known for selling more products than any other company, but to be know for delivering outstanding products. We are here to help you in covering all your requirements with a smile.",
     },
   ];
 

@@ -14,7 +14,6 @@ export const NavbarContainer = styled.nav`
   top: ${({ scrollNav }) => (scrollNav ? "0" : "")};
   z-index: 10;
   transition: all 0.5s ease;
-  overflow-y: hidden;
   width: 100%;
 
   @media screen and (min-width: 769px) {
@@ -96,20 +95,22 @@ export const NavMenu = styled.div`
     border-color: #01194f;
     align-items: flex-start;
     padding: 0.5rem 0;
+    margin-right: 10px;
   }
 `;
 
-export const NavLinks = styled.span`
+export const NavLinks = styled.div`
   color: inherit;
+  position: relative;
   padding: 0.5rem 1.2rem;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1rem;
   margin: 0 10px;
+  font-size: 1rem;
   font-weight: 500;
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
   letter-spacing: 1px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
 
   &:hover {
     border-color: inherit;
@@ -120,14 +121,101 @@ export const NavLinks = styled.span`
     text-transform: none;
     padding: 0.5rem 1rem;
     font-weight: 400;
+    width: 100%;
+    text-align: left;
+    border: none;
   }
+
+  &:hover ul {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+  }
+`;
+
+export const ProductCategoriesList = styled.ul`
+  width: 185px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease-in;
+
+  &.desktop-menu {
+    position: absolute;
+    top: 62px;
+    transform: translateX(-1.2rem);
+    opacity: 0;
+  }
+
+  &.mobile-menu {
+    opacity: 1;
+    display: ${({ categoryOpen }) => (categoryOpen ? "flex" : "none")};
+  }
+`;
+
+export const ProductCategory = styled.div`
+  color: #00b4d8;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  text-align: left;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+
+  &.mobile-link {
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    color: #01194f;
+    transition: all 0.2s ease-in;
+  }
+
+  &:hover ul {
+    visibility: visible;
+  }
+`;
+
+export const RadiatorCategoriesList = styled.ul`
+  width: 185px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease-in;
+  position: absolute;
+  left: 167px;
+  top: -8px;
+  visibility: hidden;
 `;
 
 export const MobileDrawer = styled.nav`
   background-color: #fff;
   width: 100%;
   position: fixed;
-  transform: translateY(${({ isOpen }) => (isOpen ? "-43%" : "-150%")});
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   transition: all 0.25s ease;
   z-index: 11;
+`;
+
+export const OpenCategoriesSVG = styled.span`
+  transform: scale(1.5);
+  display: ${({ categoryOpen }) => (categoryOpen ? "none" : "block")};
+`;
+
+export const CloseCategoriesSVG = styled.span`
+  transform: scale(1.5);
+  display: ${({ categoryOpen }) => (categoryOpen ? "block" : "none")};
 `;

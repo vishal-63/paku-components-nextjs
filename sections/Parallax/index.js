@@ -17,26 +17,20 @@ const ParallaxContainer = () => {
   return (
     <Parallax bgImage={parallaxBg} bgImageAlt="Parallax Image" strength={500}>
       <ParallaxContent>
-        <ParallaxTitle>Some Facts About Us</ParallaxTitle>
-        <ParallaxSubtitle>
-          Delivering some effective and high-quality business solutions
-        </ParallaxSubtitle>
+        <ParallaxTitle>Facts About Us</ParallaxTitle>
+        <ParallaxSubtitle>Our Company In Numbers</ParallaxSubtitle>
         <ParallaxInfo id="parallax-info">
           <ParallaxDiv>
-            <ParallaxNumber className="parallax-number">1.6k</ParallaxNumber>
-            <ParallaxText>Projects</ParallaxText>
+            <ParallaxNumber className="parallax-number">30</ParallaxNumber>
+            <ParallaxText>Years of Experience</ParallaxText>
           </ParallaxDiv>
           <ParallaxDiv>
-            <ParallaxNumber className="parallax-number">27</ParallaxNumber>
-            <ParallaxText>Winning Awards</ParallaxText>
+            <ParallaxNumber className="parallax-number">100+</ParallaxNumber>
+            <ParallaxText>Clients</ParallaxText>
           </ParallaxDiv>
           <ParallaxDiv>
-            <ParallaxNumber className="parallax-number">87</ParallaxNumber>
-            <ParallaxText>Proffesionals</ParallaxText>
-          </ParallaxDiv>
-          <ParallaxDiv>
-            <ParallaxNumber className="parallax-number">99%</ParallaxNumber>
-            <ParallaxText>Satisfaction</ParallaxText>
+            <ParallaxNumber className="parallax-number">20000+</ParallaxNumber>
+            <ParallaxText>Products sold</ParallaxText>
           </ParallaxDiv>
         </ParallaxInfo>
       </ParallaxContent>

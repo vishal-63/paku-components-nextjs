@@ -57,9 +57,9 @@ export const HeroText = styled.div`
   transform: translate(-50%, -50%);
   z-index: 10;
 
-  @media (min-width: 540px) {
+  /* @media (min-width: 540px) {
     align-items: flex-start;
-  }
+  } */
 `;
 
 export const HeroHeading = styled.h1`
@@ -69,6 +69,7 @@ export const HeroHeading = styled.h1`
   color: #00b4d8;
   letter-spacing: 2px;
   z-index: 10;
+  text-align: center;
 
   @media screen and (max-width: 767px) {
     font-size: 30px;
@@ -82,6 +83,7 @@ export const HeroSubtitle = styled.p`
   color: #e9f6fc;
   letter-spacing: 0.5px;
   z-index: 10;
+  text-align: center;
 
   @media (max-width: 767px) {
     font-size: 16px;
@@ -89,7 +91,6 @@ export const HeroSubtitle = styled.p`
   }
 
   @media (max-width: 420px) {
-    text-align: center;
   }
 `;
 

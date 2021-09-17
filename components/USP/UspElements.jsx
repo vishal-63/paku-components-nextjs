@@ -75,6 +75,7 @@ export const UspCardIcon = styled.div`
   margin-left: 210px;
   background-color: #fff;
   padding: 0.5rem;
+  padding-bottom: 0;
   text-align: center;
 
   @media (max-width: 1024px) {

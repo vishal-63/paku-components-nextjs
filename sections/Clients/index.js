@@ -20,14 +20,14 @@ import { IoMdQuote } from "react-icons/io";
 const Clients = () => {
   return (
     <Container>
-      <TeamTitle data-aos="fade-up">Our Clients</TeamTitle>
+      <TeamTitle data-aos="fade-up">What Our Clients Has To Say</TeamTitle>
       <ClientWrapper data-aos="fade-up">
         <ClientCard>
           <ClientHeader>
             <Image src={client1} alt="Client Image" layout="intrinsic" />
             <ClientInfo>
-              <ClientName>Sam Wilson</ClientName>
-              <ClientSubtitle>CEO "Manstep"</ClientSubtitle>
+              <ClientName>Lalit Shah</ClientName>
+              <ClientSubtitle>Arihant Auto Agency</ClientSubtitle>
             </ClientInfo>
           </ClientHeader>
           <ClientContent>
@@ -35,10 +35,10 @@ const Clients = () => {
               <IoMdQuote />
             </ClientIcon>
             <ClientText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip
+              I have been working with PAKU Components since their inception.
+              And I am so glad to say that I was one of their initial clients.
+              Since I working with them, I haven’t got the need to find anyone
+              else. Thorough professionals who know what to deliver.
             </ClientText>
           </ClientContent>
         </ClientCard>
@@ -47,8 +47,8 @@ const Clients = () => {
           <ClientHeader>
             <Image src={client2} alt="Client Image" layout="intrinsic" />
             <ClientInfo>
-              <ClientName>Michelle Johnson</ClientName>
-              <ClientSubtitle>CEO "WorkForce"</ClientSubtitle>
+              <ClientName>Mahaveer Jain</ClientName>
+              <ClientSubtitle>Reliance Radiators</ClientSubtitle>
             </ClientInfo>
           </ClientHeader>
           <ClientContent>
@@ -56,10 +56,10 @@ const Clients = () => {
               <IoMdQuote />
             </ClientIcon>
             <ClientText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip
+              I have placed PAKU Components many orders this year and I can say
+              that there wasn’t even one order in which I had to return,
+              exchange or even complain about the delivery and the products.
+              Amazing work.
             </ClientText>
           </ClientContent>
         </ClientCard>

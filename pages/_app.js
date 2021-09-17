@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
-  
   line-height: 1.71429;
 }
 
@@ -35,6 +34,7 @@ textarea {
 a {
   text-decoration: none;
   color: inherit;
+  width: 100%;
 }
 
 

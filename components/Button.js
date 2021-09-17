@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const Btn = styled.div`
+export const Btn = styled.div`
   position: relative;
   max-width: 200px;
-  top: 1.5rem;
+  /* top: 1.5rem; */
   color: #fff;
   background-color: #01194f;
   border-radius: 30px;

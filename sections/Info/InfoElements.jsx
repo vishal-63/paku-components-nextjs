@@ -47,7 +47,7 @@ export const InfoText = styled.div`
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  margin-top: 1rem;
+  margin: 1rem 0;
   word-spacing: 5px;
   position: relative;
 

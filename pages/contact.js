@@ -85,17 +85,19 @@ const contact = () => {
             How to find us
           </ContactFormTitle>
           <ContactText style={{ marginTop: "1.5rem" }}>
-            If you have any questions, just fill in the contact form, and we
-            will answer you shortly. If you are living nearby, come visit
-            Starbis in one of our comfortable offices.
+            If you have any enquiry or issue, feel free to contact us. You can
+            either fill this form, call us or email us.
           </ContactText>
-          <ContactInfoTitle>Office</ContactInfoTitle>
+          <ContactInfoTitle>Reach Us Via</ContactInfoTitle>
           <ContactText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, ex
-            vero incidunt corporis cum aut!
+            Address: No. 96, 1st Floor, 1st Main, 4th Cross, New Timber Yard
+            Layout, Mysore Road, Bengaluru, 560026
             <br />
-            Telephone: <span style={{ color: "#307bd5" }}>+91-8197302228</span>
-            <br /> Email:{" "}
+            Telephone:{" "}
+            <a href="tel:+91-8197302228">
+              <span style={{ color: "#307bd5" }}>+91-8197302228</span>
+            </a>
+            <br /> Email: &nbsp;
             <span style={{ color: "#307bd5" }}>pakucomponents@gmail.com</span>
           </ContactText>
         </ContactInfo>

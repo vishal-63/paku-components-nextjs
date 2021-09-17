@@ -15,6 +15,7 @@ import UspCards from "../../components/USP";
 import Brands from "../../components/Brands";
 import Link from "next/link";
 import Btn from "../../components/Button";
+import CTA from "../../components/CTA";
 
 class Infosection extends Component {
   render() {
@@ -31,10 +32,10 @@ class Infosection extends Component {
               30+ Years in this industry and has knowledge of everything that
               goes on in the industry. PAKU Components focus on providing best
               quality products, keeping consumer satisfaction in mind.
-              <Btn>
-                <Link href="/about"> Know More</Link>
-              </Btn>
             </InfoText>
+            <Btn>
+              <Link href="/about"> Know More</Link>
+            </Btn>
           </InfoContent>
           <Image
             src={img}
@@ -49,6 +50,8 @@ class Infosection extends Component {
         <Products />
 
         <UspCards />
+
+        {/* <CTA /> */}
 
         <Brands />
       </InfoContainer>

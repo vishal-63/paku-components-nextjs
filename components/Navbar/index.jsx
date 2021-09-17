@@ -5,22 +5,36 @@ import logo from "../../assets/images/logo-copy.png";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
+  MdKeyboardArrowDown,
+  MdKeyboardArrowRight,
+  MdKeyboardArrowUp,
+} from "react-icons/md";
+import {
   NavbarContainer,
   NavWrapper,
   NavTitle,
   NavMenu,
   NavLinks,
+  ProductCategoriesList,
+  ProductCategory,
+  RadiatorCategoriesList,
   MobileIcon,
   CloseIcon,
   MobileDrawer,
+  OpenCategoriesSVG,
+  CloseCategoriesSVG,
 } from "./NavbarElements";
 
 const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [categoryOpen, setCategoryOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
+  const toggle = () => setIsOpen(!isOpen);
+
+  const toggleCategories = () => {
+    setCategoryOpen(!categoryOpen);
+    console.log(categoryOpen);
   };
 
   const changeNav = () => {
@@ -51,18 +65,67 @@ const Navbar = () => {
           </MobileIcon>
 
           <NavMenu scrollNav={scrollNav} isOpen={isOpen}>
-            <Link href="/about">
-              <NavLinks>About</NavLinks>
-            </Link>
-            <Link href="/">
-              <NavLinks>Products</NavLinks>
-            </Link>
-            <Link href="/blogs">
-              <NavLinks>Blogs</NavLinks>
-            </Link>
-            <Link href="/contact">
-              <NavLinks>Contact</NavLinks>
-            </Link>
+            <NavLinks>
+              <Link href="/about">About</Link>
+            </NavLinks>
+
+            <NavLinks>
+              <Link href="/products">Products</Link>
+
+              <ProductCategoriesList className="desktop-menu">
+                <ProductCategory>
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    Radiators
+                    <MdKeyboardArrowRight />
+                  </div>
+                  <RadiatorCategoriesList>
+                    <ProductCategory>Car</ProductCategory>
+                    <ProductCategory>Commercial</ProductCategory>
+                    <ProductCategory>Tractor</ProductCategory>
+                    <ProductCategory>Earthmovers</ProductCategory>
+                    <ProductCategory>Forklift</ProductCategory>
+                  </RadiatorCategoriesList>
+                </ProductCategory>
+
+                <ProductCategory>Top-Bottoms</ProductCategory>
+                <ProductCategory>Cores</ProductCategory>
+                <ProductCategory>
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    Intercoolers
+                    <MdKeyboardArrowRight />
+                  </div>
+                  <RadiatorCategoriesList>
+                    <ProductCategory>Tata</ProductCategory>
+                    <ProductCategory>LeyLand</ProductCategory>
+                  </RadiatorCategoriesList>
+                </ProductCategory>
+
+                <ProductCategory>Condensor</ProductCategory>
+                <ProductCategory>Fan Assembly</ProductCategory>
+              </ProductCategoriesList>
+            </NavLinks>
+
+            <NavLinks>
+              <Link href="/blogs">Blogs</Link>
+            </NavLinks>
+
+            <NavLinks>
+              <Link href="/contact">Contact</Link>
+            </NavLinks>
           </NavMenu>
         </NavWrapper>
       </NavbarContainer>
@@ -96,12 +159,59 @@ const Navbar = () => {
           <Link href="/about">
             <NavLinks className="mobile-link">About</NavLinks>
           </Link>
-          <Link href="/">
-            <NavLinks className="mobile-link">Products</NavLinks>
-          </Link>
+
+          <NavLinks className="mobile-link">
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Link href="/products">Products</Link>
+
+              <OpenCategoriesSVG
+                onClick={toggleCategories}
+                categoryOpen={categoryOpen}
+              >
+                <MdKeyboardArrowDown />
+              </OpenCategoriesSVG>
+
+              <CloseCategoriesSVG
+                onClick={toggleCategories}
+                categoryOpen={categoryOpen}
+              >
+                <MdKeyboardArrowUp />
+              </CloseCategoriesSVG>
+            </div>
+            <ProductCategoriesList
+              className="mobile-menu"
+              categoryOpen={categoryOpen}
+            >
+              <ProductCategory className="mobile-link">
+                Radiators
+              </ProductCategory>
+              <ProductCategory className="mobile-link">
+                Top-Bottoms
+              </ProductCategory>
+              <ProductCategory className="mobile-link">Cores</ProductCategory>
+              <ProductCategory className="mobile-link">
+                Intercooler
+              </ProductCategory>
+              <ProductCategory className="mobile-link">
+                Condensor
+              </ProductCategory>
+              <ProductCategory className="mobile-link">
+                Fan Assembly
+              </ProductCategory>
+            </ProductCategoriesList>
+          </NavLinks>
+
           <Link href="/blogs">
             <NavLinks className="mobile-link">Blogs</NavLinks>
           </Link>
+
           <Link href="/contact">
             <NavLinks className="mobile-link">Contact</NavLinks>
           </Link>

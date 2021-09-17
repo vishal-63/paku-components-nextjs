@@ -8,7 +8,8 @@ const PageTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(${(props) => props.bgImg}) center;
+  background: url(${(props) => props.bgImg});
+  background-position: center;
   background-size: cover;
   min-height: 100px;
   color: #fff;

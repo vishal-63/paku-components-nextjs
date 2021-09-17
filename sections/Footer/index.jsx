@@ -34,7 +34,7 @@ class Footer extends Component {
               <MdLocationOn />
             </FooterIcon>
             <FooterText>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              #96, 1st Floor, 1st Main, 4th Cross, New Timber Yard Layout 560020
             </FooterText>
           </FooterSectionWrapper>
           <FooterSectionWrapper>

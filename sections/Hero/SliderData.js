@@ -1,5 +1,5 @@
-import img1 from "../../assets/images/banner 1.jpg";
-import img2 from "../../assets/images/banner 2.jpg";
+import img1 from "../../assets/images/banner-1.jpg";
+import img2 from "../../assets/images/banner 2.webp";
 import img3 from "../../assets/images/banner 3.jpg";
 
 export const SliderData = [
