@@ -109,7 +109,7 @@ export const NavLinks = styled.div`
   letter-spacing: 1px;
   border: 1px solid transparent;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.2s ease-in;
   cursor: pointer;
 
   &:hover {
@@ -127,8 +127,8 @@ export const NavLinks = styled.div`
   }
 
   &:hover ul {
-    opacity: 1;
-    transition: all 0.3s ease-in;
+    visibility: visible;
+    transition: all 0.2s ease-in;
   }
 `;
 
@@ -140,17 +140,16 @@ export const ProductCategoriesList = styled.ul`
   align-items: flex-start;
   justify-content: center;
   padding: 0.5rem 1.2rem;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 
   &.desktop-menu {
     position: absolute;
     top: 62px;
     transform: translateX(-1.2rem);
-    opacity: 0;
+    visibility: hidden;
   }
 
   &.mobile-menu {
-    opacity: 1;
     display: ${({ categoryOpen }) => (categoryOpen ? "flex" : "none")};
   }
 `;
@@ -178,11 +177,10 @@ export const ProductCategory = styled.div`
 
   &:hover {
     color: #01194f;
-    transition: all 0.2s ease-in;
   }
 
   &:hover ul {
-    visibility: visible;
+    transform: scaleX(1);
   }
 `;
 
@@ -194,11 +192,11 @@ export const RadiatorCategoriesList = styled.ul`
   align-items: flex-start;
   justify-content: center;
   padding: 0.5rem 1.2rem;
-  transition: all 0.3s ease-in;
   position: absolute;
   left: 167px;
   top: -8px;
-  visibility: hidden;
+  transform: scaleX(0);
+  transform-origin: left;
 `;
 
 export const MobileDrawer = styled.nav`
