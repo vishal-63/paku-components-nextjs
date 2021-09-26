@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Meta from "../components/Meta";
-import bgImg from "../assets/images/about-background.jpg";
+import bgImg from "../assets/images/about-background.png";
 import AboutInfo from "../sections/About - Info";
 import ParallaxContainer from "../sections/Parallax";
 import Team from "../sections/Team";
