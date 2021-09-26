@@ -49,7 +49,7 @@ class Brands extends Component {
                   effect="opacity"
                 />
               </a>
-              <a
+              {/* <a
                 href="https://www.karnavatiautomall.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -61,12 +61,17 @@ class Brands extends Component {
                   className={BrandsStyles.brand__img}
                   effect="opacity"
                 />
-              </a>
+              </a> */}
               <a
                 href="http://www.radiatorplastictank.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ cursor: "pointer" }}
+                style={{
+                  cursor: "pointer",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+                className="img3"
               >
                 <Image
                   src={img4}

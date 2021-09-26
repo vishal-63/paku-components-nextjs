@@ -169,6 +169,7 @@ export const ProductCategory = styled.div`
   &.mobile-link {
     text-transform: none;
     font-weight: 400;
+    color: #01194f;
   }
 
   &:last-child {

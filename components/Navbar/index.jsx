@@ -32,10 +32,7 @@ const Navbar = () => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const toggleCategories = () => {
-    setCategoryOpen(!categoryOpen);
-    console.log(categoryOpen);
-  };
+  const toggleCategories = () => setCategoryOpen(!categoryOpen);
 
   const changeNav = () => {
     window.scrollY >= 35 ? setScrollNav(true) : setScrollNav(false);
@@ -54,8 +51,8 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt="Paku Components Logo"
-                width="100"
-                height="100"
+                width="130"
+                height="130"
               />
             </NavTitle>
           </Link>
@@ -91,6 +88,7 @@ const Navbar = () => {
                     <ProductCategory>Tractor</ProductCategory>
                     <ProductCategory>Earthmovers</ProductCategory>
                     <ProductCategory>Forklift</ProductCategory>
+                    <ProductCategory>Genset</ProductCategory>
                   </RadiatorCategoriesList>
                 </ProductCategory>
 
@@ -109,8 +107,8 @@ const Navbar = () => {
                     <MdKeyboardArrowRight />
                   </div>
                   <RadiatorCategoriesList style={{ top: "0" }}>
-                    <ProductCategory>Tata</ProductCategory>
-                    <ProductCategory>LeyLand</ProductCategory>
+                    <ProductCategory>Car</ProductCategory>
+                    <ProductCategory>Commercial</ProductCategory>
                   </RadiatorCategoriesList>
                 </ProductCategory>
 

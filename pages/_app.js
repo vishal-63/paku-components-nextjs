@@ -15,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
   font-family:  "Montserrat", sans-serif;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1.71429;
 }

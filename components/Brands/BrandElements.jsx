@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BrandsContainer = styled.section`
   width: 100%;
-  margin: 3rem auto 2rem;
+  margin: 0 auto 2rem;
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,8 @@ export const BrandsWrapper = styled.div`
 export const BrandsImgWrapper = styled.div`
   margin: 3rem 2rem 0;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   grid-gap: 2.5rem;
   align-items: center;
   max-width: 1000px;
@@ -31,6 +32,13 @@ export const BrandsImgWrapper = styled.div`
   }
 
   @media (min-width: 540px) {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+  }
+
+  & .img3 {
+    @media (max-width: 540px) {
+      grid-area: 2 / 1 / 3 / 3;
+    }
   }
 `;

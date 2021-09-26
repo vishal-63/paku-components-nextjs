@@ -5,6 +5,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #fff;
   line-height: 1.71429;

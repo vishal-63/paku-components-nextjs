@@ -15,9 +15,9 @@
   }
 }
 
-/* @media (max-width: 540px) {
+@media (max-width: 540px) {
   .brand__img {
     width: 100px;
     height: 100px;
   }
-} */
+}

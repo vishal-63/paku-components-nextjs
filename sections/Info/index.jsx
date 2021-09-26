@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Image from "next/image";
-import img from "../../assets/images/car.svg";
+import img from "../../assets/images/about-us.jpg";
 import {
   InfoContainer,
   InfoWrapper,
@@ -51,7 +51,7 @@ class Infosection extends Component {
 
         <UspCards />
 
-        {/* <CTA /> */}
+        <CTA />
 
         <Brands />
       </InfoContainer>
