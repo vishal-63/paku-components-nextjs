@@ -3,22 +3,18 @@ import Link from "next/link";
 
 export const NavbarContainer = styled.nav`
   background-color: ${({ scrollNav }) => (scrollNav ? "#fff" : "transparent")};
-  box-shadow: ${({ scrollNav }) =>
-    scrollNav ? "0 5px 20px rgba(0,0,0,0.2)" : ""};
+
   height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
-  top: ${({ scrollNav }) => (scrollNav ? "0" : "")};
   z-index: 10;
-  transition: all 0.5s ease;
   width: 100%;
-
-  @media screen and (min-width: 769px) {
-    width: auto;
-  }
+  box-shadow: ${({ scrollNav }) =>
+    scrollNav ? "0 5px 20px rgba(0,0,0,0.2)" : ""};
+  top: ${({ scrollNav }) => (scrollNav ? "0" : "")};
+  position: ${({ scrollNav }) => (scrollNav ? "fixed" : "relative")};
 `;
 
 export const NavWrapper = styled.div`
@@ -101,16 +97,18 @@ export const NavMenu = styled.div`
 
 export const NavLinks = styled.div`
   color: inherit;
-  position: relative;
-  padding: 0.5rem 1.2rem;
   margin: 0 10px;
-  font-size: 1rem;
+  padding: 0.5rem 0;
   font-weight: 500;
   letter-spacing: 1px;
   border: 1px solid transparent;
   text-decoration: none;
   transition: all 0.2s ease-in;
   cursor: pointer;
+
+  & > a {
+    padding: 0.5rem 1.2rem;
+  }
 
   &:hover {
     border-color: inherit;
@@ -144,7 +142,7 @@ export const ProductCategoriesList = styled.ul`
 
   &.desktop-menu {
     position: absolute;
-    top: 62px;
+    top: 65px;
     transform: translateX(-1.2rem);
     visibility: hidden;
   }

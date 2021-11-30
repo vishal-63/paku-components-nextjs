@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -13,9 +14,10 @@ const PageTitle = styled.div`
   background-size: cover;
   min-height: 100px;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: Helvetica, sans-serif;
   letter-spacing: 2px;
+  margin-top: ${({ scrollNav }) => (scrollNav ? "80px" : "")};
 
   @media (min-width: 768px) {
     font-size: 2rem;
@@ -35,11 +37,12 @@ const PageCrumb = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #eff1f7;
-  height: 65px;
+  height: 3rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.75rem;
 
   @media (min-width: 1100px) {
+    height: 4rem;
     font-size: 1rem;
   }
 `;
@@ -50,9 +53,19 @@ const HomeLink = styled.span`
 `;
 
 const Header = ({ title, page, pages, bgImg }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () =>
+      window.scrollY >= 35 ? setScrollNav(true) : setScrollNav(false)
+    );
+  });
+
   return (
     <>
-      <PageTitle bgImg={bgImg.src}>{title}</PageTitle>
+      <PageTitle bgImg={bgImg.src} scrollNav={scrollNav}>
+        {title}
+      </PageTitle>
       <PageCrumb>
         {pages.map((pages, index) => {
           return (

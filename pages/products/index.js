@@ -4,6 +4,7 @@ import bgImg from "../../assets/images/banner-1.jpg";
 
 const Products = () => {
   const pages = [{ page: "Home", link: "/" }];
+
   return (
     <>
       <Meta title="Products - Paku Components" />

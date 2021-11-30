@@ -3,7 +3,6 @@ import arrow from "../../assets/images/arrow.svg";
 
 export const InfoContainer = styled.section`
   position: relative;
-  top: -100px;
   display: flex;
   justify-content: center;
   align-items: center;

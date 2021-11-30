@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export const HerosectionSlider = styled.section`
   position: relative;
-  top: -120px;
   left: 0;
+  top: ${({ scrollNav }) => (scrollNav ? "-40px" : "-120px")};
   width: 100%;
   height: 100vh;
   overflow: hidden;

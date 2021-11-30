@@ -18,13 +18,19 @@ import HeroStyles from "../../styles/Hero.module.css";
 
 const Herosection = ({ slides }) => {
   const [current, setCurrent] = useState(0);
+  const [scrollNav, setScrollNav] = useState(false);
   const length = slides.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
+  const changeNav = () => {
+    window.scrollY >= 35 ? setScrollNav(true) : setScrollNav(false);
+  };
+
   useEffect(() => {
+    window.addEventListener("scroll", changeNav);
     const Interval = setInterval(nextSlide, 9000);
     return () => {
       clearInterval(Interval);
@@ -40,7 +46,7 @@ const Herosection = ({ slides }) => {
   }
 
   return (
-    <HerosectionSlider>
+    <HerosectionSlider scrollNav={scrollNav}>
       <HeroDotsWrapper>
         <HeroDot onClick={() => changeSlide(0)}>
           <FaCircle />

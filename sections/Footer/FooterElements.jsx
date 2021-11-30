@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.section`
   width: 100%;
-  /* position: relative;
-  top: 3rem; */
   display: flex;
   flex-direction: column;
   background-color: #0f0f0f;

@@ -6,7 +6,7 @@ const Layout = ({ children, color, border }) => {
   return (
     <>
       <Nav color={color} border={border} />
-      <main> {children}</main>
+      <> {children}</>
 
       <Footer />
     </>

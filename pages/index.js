@@ -8,10 +8,11 @@ export default function Home() {
   return (
     <>
       <Meta />
-
-      <Herosection slides={SliderData} />
-      <Infosection />
-      <ContactSection />
+      <main>
+        <Herosection slides={SliderData} />
+        <Infosection />
+        <ContactSection />
+      </main>
     </>
   );
 }

@@ -51,8 +51,8 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt="Paku Components Logo"
-                width="130"
-                height="130"
+                width="120"
+                height="120"
               />
             </NavTitle>
           </Link>
@@ -69,7 +69,10 @@ const Navbar = () => {
             <NavLinks>
               <Link href="/products">Products</Link>
 
-              <ProductCategoriesList className="desktop-menu">
+              <ProductCategoriesList
+                className="desktop-menu"
+                scrollNav={scrollNav}
+              >
                 <ProductCategory>
                   <div
                     style={{
@@ -79,20 +82,45 @@ const Navbar = () => {
                       alignItems: "center",
                     }}
                   >
-                    Radiators
+                    <Link href="/products/radiators">Radiators</Link>
                     <MdKeyboardArrowRight />
                   </div>
                   <RadiatorCategoriesList>
-                    <ProductCategory>Car</ProductCategory>
-                    <ProductCategory>Commercial</ProductCategory>
-                    <ProductCategory>Tractor</ProductCategory>
-                    <ProductCategory>Earthmovers</ProductCategory>
-                    <ProductCategory>Forklift</ProductCategory>
-                    <ProductCategory>Genset</ProductCategory>
+                    <ProductCategory>
+                      <Link href="/products/radiators/car">Car</Link>
+                    </ProductCategory>
+                    <ProductCategory>
+                      <Link href="/products/radiators/commercial">
+                        Commercial
+                      </Link>
+                    </ProductCategory>
+                    <ProductCategory>
+                      <Link href="/products/radiators/industrial">
+                        Industrial
+                      </Link>
+                    </ProductCategory>
+                    <ProductCategory>
+                      <Link href="/products/radiators/tractor">Tractor</Link>
+                    </ProductCategory>
+                    <ProductCategory>
+                      <Link href="/products/radiators/earthmover">
+                        Earthmovers
+                      </Link>
+                    </ProductCategory>
+                    <ProductCategory>
+                      <Link href="/products/radiators/generator">
+                        Generators
+                      </Link>
+                    </ProductCategory>
                   </RadiatorCategoriesList>
                 </ProductCategory>
 
-                <ProductCategory>Top-Bottoms</ProductCategory>
+                <ProductCategory>
+                  <Link href="/products/top-tank">Top Tanks</Link>
+                </ProductCategory>
+                <ProductCategory>
+                  <Link href="/products/bottom-tank">Bottom Tanks</Link>
+                </ProductCategory>
                 <ProductCategory>Cores</ProductCategory>
                 <ProductCategory>
                   <div
@@ -188,10 +216,13 @@ const Navbar = () => {
               categoryOpen={categoryOpen}
             >
               <ProductCategory className="mobile-link">
-                Radiators
+                <Link href="/products/radiators">Radiators</Link>
               </ProductCategory>
               <ProductCategory className="mobile-link">
-                Top-Bottoms
+                <Link href="/products/top-tank">Top Tanks</Link>
+              </ProductCategory>
+              <ProductCategory className="mobile-link">
+                <Link href="/products/bottom-tank">Bottom Tanks</Link>
               </ProductCategory>
               <ProductCategory className="mobile-link">Cores</ProductCategory>
               <ProductCategory className="mobile-link">

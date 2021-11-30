@@ -19,6 +19,7 @@ export const ProductCardsWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   overflow: hidden;
 `;
 
@@ -107,6 +108,7 @@ export const ProductCardLink = styled.div`
   color: #000;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   margin-bottom: 0.75rem;
+  cursor: pointer;
 
   /* @media (max-width: 1024px) {
     margin-bottom: 0;

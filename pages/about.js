@@ -9,7 +9,7 @@ import Clients from "../sections/Clients";
 const About = () => {
   const pages = [{ page: "Home", link: "/" }];
   return (
-    <div>
+    <>
       <Meta title="About - Paku Components" />
       <Header title="About" pages={pages} page="About" bgImg={bgImg} />
       <main>
@@ -18,7 +18,7 @@ const About = () => {
         <ParallaxContainer />
         <Clients />
       </main>
-    </div>
+    </>
   );
 };
 

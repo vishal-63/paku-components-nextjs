@@ -6,7 +6,7 @@ import bgImg from "../assets/images/blogs-background.jpg";
 import BlogList from "../components/BlogList";
 import BlogAside from "../components/Blog Aside/";
 
-const BlogPageContainer = styled.section`
+const BlogPageContainer = styled.main`
   width: 100%;
   margin: 3rem auto;
 
@@ -31,7 +31,7 @@ const BlogLayout = styled.div`
 const blogs = ({ bloglist }) => {
   const pages = [{ page: "Home", link: "/" }];
   return (
-    <div>
+    <>
       <Meta title="Blogs - Paku Components" />
       <Header title="Blogs" pages={pages} page="Blogs" bgImg={bgImg} />
       <BlogPageContainer>
@@ -40,7 +40,7 @@ const blogs = ({ bloglist }) => {
           <BlogAside />
         </BlogLayout>
       </BlogPageContainer>
-    </div>
+    </>
   );
 };
 

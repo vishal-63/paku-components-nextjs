@@ -10,7 +10,7 @@ import {
   InfoListItems,
 } from "./InfoElements";
 import { Title } from "../../components/Titles";
-import Products from "../../components/Products";
+import Products from "../../components/Product Cards";
 import UspCards from "../../components/USP";
 import Brands from "../../components/Brands";
 import Link from "next/link";

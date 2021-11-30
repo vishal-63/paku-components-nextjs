@@ -1,0 +1,73 @@
+import blog1 from "/assets/images/blog-1.jpg";
+import blog2 from "/assets/images/blog-2.webp";
+import blog3 from "/assets/images/blog-3.jpg";
+
+const img1 = blog1;
+const img2 = blog2;
+const img3 = blog3;
+
+export const blogs = [
+  {
+    id: "1",
+    likes: "",
+    comments: "",
+    date: "",
+    month: "",
+    author: " ",
+    title: "",
+    para1: "",
+    img: img1,
+    imgAlt: "",
+    para2: "",
+    quote: "",
+    para3: "",
+    recentPost1: "",
+    recentPost1Title: "",
+    recentPost1Img: img2,
+    recentPost2: "",
+    recentPostitle: "",
+    recentPost2Img: img3,
+  },
+  {
+    id: "2",
+    likes: "",
+    comments: "",
+    date: "",
+    month: "",
+    author: "",
+    title: "",
+    para1: "",
+    img: img2,
+    imgAlt: "",
+    para2: "",
+    quote: "",
+    para3: "",
+    recentPost1: "",
+    recentPost1Title: "",
+    recentPost1Img: img1,
+    recentPost2: "",
+    recentPost2Title: "",
+    recentPost2Img: img3,
+  },
+  {
+    id: "3",
+    likes: "",
+    comments: "",
+    date: "",
+    month: "",
+    author: "",
+    title: "",
+    para1: "",
+    img: img3,
+    imgAlt: "",
+    para2: "",
+    quote: "",
+    para3: "",
+    recentPost1: "",
+    recentPost1Title: "",
+    recentPost1Img: img1,
+    recentPost2: "",
+    recentPost2Title: "",
+    recentPost2Img: img2,
+  },
+];

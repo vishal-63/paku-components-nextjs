@@ -1,4 +1,4 @@
-import { blogs } from "../../../BlogData";
+import { blogs } from "../../../data/BlogData";
 
 export default function handler({ query: { id } }, res) {
   const filtered = blogs.filter((blog) => blog.id === id);

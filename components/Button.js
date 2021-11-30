@@ -20,6 +20,20 @@ export const Btn = styled.div`
     border-color: #012883;
     transition: all 0.2s ease-in-out;
   }
+
+  &.products {
+    background-color: transparent;
+    color: #01194f;
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      background-color: #01194f;
+      color: #fff;
+    }
+  }
 `;
 
 export default Btn;

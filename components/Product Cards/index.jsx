@@ -7,13 +7,13 @@ import {
   ProductCardLink,
   ProductCardImgWrapper,
   ProductCardSection,
-} from "./ProductElements";
-import img1 from "../../assets/images/radiator.jpg";
-import img2 from "../../assets/images/core.jpg";
-import img3 from "../../assets/images/top-bottom.png";
-import img4 from "../../assets/images/condenser.png";
-import img5 from "../../assets/images/intercooler.jpg";
-import img6 from "../../assets/images/fan-assembly.png";
+} from "./ProductCardElements";
+import img1 from "../../assets/images/radiators.png";
+import img2 from "../../assets/images/cores.png";
+import img3 from "../../assets/images/top-bots.png";
+import img4 from "../../assets/images/condensers.png";
+import img5 from "../../assets/images/intercoolers.png";
+import img6 from "../../assets/images/fan-covers.png";
 import { Title, Subtitle } from "../Titles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
@@ -45,7 +45,9 @@ class Products extends Component {
                     ></Image>
                   </ProductCardImgWrapper>
                   <ProductCardTitle>Radiator</ProductCardTitle>
-                  <ProductCardLink href="/">Show More</ProductCardLink>
+                  <ProductCardLink>
+                    <Link href="/products/radiators">Show More</Link>
+                  </ProductCardLink>
                 </ProductCard>
 
                 <ProductCard data-aos="flip-right">
@@ -59,7 +61,7 @@ class Products extends Component {
                   </ProductCardImgWrapper>
                   <ProductCardTitle>Core</ProductCardTitle>
                   <ProductCardLink>
-                    <Link href="/"> Show More</Link>
+                    <Link href="/">Show More</Link>
                   </ProductCardLink>
                 </ProductCard>
 
@@ -74,7 +76,7 @@ class Products extends Component {
                   </ProductCardImgWrapper>
                   <ProductCardTitle>Top-Bottom</ProductCardTitle>
                   <ProductCardLink>
-                    <Link href="/"> Show More</Link>
+                    <Link href="/">Show More</Link>
                   </ProductCardLink>
                 </ProductCard>
               </ProductCardSection>
@@ -93,7 +95,7 @@ class Products extends Component {
                   </ProductCardImgWrapper>
                   <ProductCardTitle>Condenser</ProductCardTitle>
                   <ProductCardLink>
-                    <Link href="/"> Show More</Link>
+                    <Link href="/">Show More</Link>
                   </ProductCardLink>
                 </ProductCard>
                 <ProductCard data-aos="flip-right">
@@ -107,7 +109,7 @@ class Products extends Component {
                   </ProductCardImgWrapper>
                   <ProductCardTitle>Cooler</ProductCardTitle>
                   <ProductCardLink>
-                    <Link href="/"> Show More</Link>
+                    <Link href="/">Show More</Link>
                   </ProductCardLink>
                 </ProductCard>
                 <ProductCard data-aos="flip-right">
@@ -121,7 +123,7 @@ class Products extends Component {
                   </ProductCardImgWrapper>
                   <ProductCardTitle>Fan Assembly</ProductCardTitle>
                   <ProductCardLink>
-                    <Link href="/"> Show More</Link>
+                    <Link href="/">Show More</Link>
                   </ProductCardLink>
                 </ProductCard>
               </ProductCardSection>
