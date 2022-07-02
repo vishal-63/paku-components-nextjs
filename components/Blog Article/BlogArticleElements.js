@@ -115,6 +115,7 @@ export const ArticleTitle = styled.h4`
   font-weight: 400;
   letter-spacing: 0;
   margin-top: 1rem;
+  margin-bottom: 2.25rem;
 
   @media (min-width: 768px) {
     margin-top: 1.25rem;
@@ -123,10 +124,23 @@ export const ArticleTitle = styled.h4`
   }
 `;
 
-export const ArticlePara = styled.p`
+export const ArticlePara = styled.div`
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   margin-top: 1.5rem;
+
+  & p {
+    margin-bottom: 1rem;
+  }
+
+  & a {
+    color: var(--blue-shade-5);
+    text-decoration: underline;
+  }
+
+  & img {
+    max-width: 100%;
+  }
 
   &:last-child {
     margin-top: 2.3rem;

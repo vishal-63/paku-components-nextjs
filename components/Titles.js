@@ -5,7 +5,7 @@ export const Title = styled.h3`
   font-size: 2.2rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #01194f;
+  color: var(--primary-blue);
   text-align: center;
 
   @media screen and (max-width: 767px) {

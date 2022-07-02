@@ -1,11 +1,10 @@
-import { useState } from "react";
-import Nav from "../sections/Nav/Nav.js";
 import Footer from "../sections/Footer";
+import Navbar from "./Navbar/index.jsx";
 
-const Layout = ({ children, color, border }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <Nav color={color} border={border} />
+      <Navbar />
       <> {children}</>
 
       <Footer />

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Image from "next/image";
-import logo from "../../assets/images/logo-copy.png";
+import logo from "../../assets/images/logo.png";
 import { MdLocationOn } from "react-icons/md";
 import { BiPhone } from "react-icons/bi";
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import arrow from "../../assets/images/arrow.svg";
+import dots from "../../assets/images/dots.svg";
 
 export const InfoContainer = styled.section`
   position: relative;
@@ -12,16 +13,17 @@ export const InfoContainer = styled.section`
 
 export const InfoWrapper = styled.div`
   position: relative;
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 36px 48px;
+  width: 85vw;
+  margin: 3rem auto 2rem;
+  padding: 2.25rem 0 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   @media screen and (max-width: 900px) {
     height: 100%;
-    padding: 1rem 1.75rem;
+    padding: 1rem 0;
     margin-top: 30px;
     flex-direction: column;
     gap: 4rem;
@@ -42,7 +44,7 @@ export const InfoContent = styled.div`
 `;
 
 export const InfoText = styled.div`
-  color: #020509;
+  color: var(--blue-shade-8);
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.5px;
@@ -65,4 +67,49 @@ export const InfoListItems = styled.li`
   margin-top: 0.5rem;
   padding-left: 1.25rem;
   vertical-align: center;
+`;
+
+export const InfoBoxContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  width: inherit;
+
+  @media (max-width: 540px) {
+    justify-content: space-around;
+    margin: 0;
+  }
+`;
+
+export const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--primary-blue);
+  text-align: center;
+  max-width: 300px;
+  padding: 1rem;
+  transition: transform 0.2s;
+
+  & svg {
+    font-size: 2rem;
+  }
+
+  & div {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  & p {
+    color: #6f6f6f;
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;

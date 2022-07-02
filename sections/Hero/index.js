@@ -1,97 +1,95 @@
 import React, { useState, useEffect } from "react";
-import { SliderData } from "./SliderData";
-import { FaCircle } from "react-icons/fa";
+import { animate, motion } from "framer-motion";
 import {
   HerosectionSlider,
-  HeroSlide,
   HeroImage,
-  HeroText,
-  HeroHeading,
+  HeroContent,
+  HeroTitle,
   HeroSubtitle,
-  HeroDotsWrapper,
-  HeroDot,
-  HeroLine,
-  HeroCurrentSlideNo,
-  HeroSlideNo,
+  HeroLink,
+  Arrows,
 } from "./HeroElements";
-import HeroStyles from "../../styles/Hero.module.css";
 
-const Herosection = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
+import img from "../../assets/images/Banner1.svg";
+import Button from "../../components/Button";
+
+const container = {
+  animate: {
+    transition: {
+      staggerChildren: 0.35,
+      // delayChildren: 1,
+    },
+  },
+};
+
+const item = {
+  initial: {
+    // opacity: 0,
+    y: 135,
+  },
+  animate: {
+    // opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.53, -0.27, 0.63, 1.29],
+      duration: 1,
+    },
+  },
+};
+
+const Herosection = () => {
   const [scrollNav, setScrollNav] = useState(false);
-  const length = slides.length;
-
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
 
   const changeNav = () => {
-    window.scrollY >= 35 ? setScrollNav(true) : setScrollNav(false);
+    window.scrollY > 0 ? setScrollNav(true) : setScrollNav(false);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
-    const Interval = setInterval(nextSlide, 9000);
-    return () => {
-      clearInterval(Interval);
-    };
-  }, [nextSlide]);
-
-  const changeSlide = (index) => {
-    setCurrent(index);
-  };
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
+  }, []);
 
   return (
     <HerosectionSlider scrollNav={scrollNav}>
-      <HeroDotsWrapper>
-        <HeroDot onClick={() => changeSlide(0)}>
-          <FaCircle />
-        </HeroDot>
-        <HeroDot onClick={() => changeSlide(1)}>
-          <FaCircle />
-        </HeroDot>
-        <HeroDot onClick={() => changeSlide(2)}>
-          <FaCircle />
-        </HeroDot>
-        <HeroLine></HeroLine>
-
-        <HeroSlideNo>
-          <HeroCurrentSlideNo>0{current + 1}</HeroCurrentSlideNo>/03
-        </HeroSlideNo>
-      </HeroDotsWrapper>
-
-      {SliderData.map((slide, index) => {
-        return (
-          <div
-            className={
-              index === current
-                ? `${HeroStyles.slide} ${HeroStyles.active}`
-                : HeroStyles.slide
-            }
-            key={index}
-          >
-            {index === current && (
-              <HeroSlide key={index}>
-                <HeroImage
-                  src={slide.image}
-                  alt="Background Image Slider"
-                  layout="intrinsic"
-                  quality={100}
-                  priority="true"
-                />
-                <HeroText>
-                  <HeroHeading>{slide.heading}</HeroHeading>
-                  <HeroSubtitle>{slide.subtitle}</HeroSubtitle>
-                </HeroText>
-              </HeroSlide>
-            )}
-          </div>
-        );
-      })}
+      <HeroImage src={img.src} alt="" />
+      <HeroContent
+        as={motion.div}
+        variants={container}
+        initial="initial"
+        animate="animate"
+      >
+        <div style={{ height: "min-content", overflow: "hidden" }}>
+          <HeroTitle as={motion.h1} variants={item}>
+            High Quality Products
+          </HeroTitle>
+        </div>
+        <div
+          style={{
+            marginTop: "2rem",
+            height: "min-content",
+            overflow: "hidden",
+          }}
+        >
+          <HeroSubtitle as={motion.p} variants={item}>
+            Products with the top notch quality for best consumer experience
+            from various brands.
+          </HeroSubtitle>
+        </div>
+        <div
+          style={{
+            height: "64px",
+            marginTop: "3rem",
+            overflowY: "hidden",
+          }}
+        >
+          <HeroLink href="/contact" as={motion.a} variants={item}>
+            <span>Contact Us</span>
+            <Arrows>
+              <span className="arrow first next"></span>
+              <span className="arrow second next"></span>
+            </Arrows>
+          </HeroLink>
+        </div>
+      </HeroContent>
     </HerosectionSlider>
   );
 };

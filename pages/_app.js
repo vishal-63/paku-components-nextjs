@@ -8,6 +8,18 @@ import BeatLoader from "react-spinners/BeatLoader";
 import LoaderStyles from "../styles/Loader.module.css";
 
 const GlobalStyle = createGlobalStyle`
+:root {
+  --blue-shade-1: #f7f7fc;
+  --blue-shade-2: #cccaec;
+  --blue-shade-3: #a09cdd;
+  --blue-shade-4: #756fcd;
+  --blue-shade-5: #4942bd;
+  --blue-shade-6: #262262;
+  --blue-shade-7: #141235;
+  --black: #030207;
+  --primary-blue: #262262;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -141,7 +153,7 @@ function MyApp({ Component, pageProps }) {
           <BeatLoader size={20} color={"#00194f"} css={loadingScreen} />
         </div>
       ) : (
-        <Layout color="#121212" border="#343434aa">
+        <Layout>
           <Component {...pageProps} />
         </Layout>
       )}

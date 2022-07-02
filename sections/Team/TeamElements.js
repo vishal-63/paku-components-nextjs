@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #eff1f7;
+  background-color: var(--blue-shade-1);
   width: 100%;
   padding: 3.125rem 0;
   display: flex;
@@ -18,7 +18,7 @@ export const TeamTitle = styled.h3`
   font-size: 2.25rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #000;
+  color: var(--black);
   margin-bottom: 2.5rem;
 `;
 
@@ -63,7 +63,7 @@ export const MemberDiv = styled.div`
 export const MemberName = styled.h3`
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
-  color: #3a7bd5;
+  color: var(--blue-shade-7);
   margin: 0.625rem 0;
 `;
 
@@ -85,6 +85,6 @@ export const SocialLinkWrapper = styled.div`
 
 export const SocialLink = styled.div`
   font-size: 1rem;
-  color: #434545;
+  color: var(--blue-shade-3);
   margin: 0 0.625rem;
 `;

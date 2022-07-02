@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import Meta from "../components/Meta";
-import Header from "../components/Header";
-import { server } from "../config";
-import bgImg from "../assets/images/blogs-background.jpg";
-import BlogList from "../components/BlogList";
-import BlogAside from "../components/Blog Aside/";
+// import "dotenv/config";
+import { GraphQLClient, gql } from "graphql-request";
+
+import Meta from "../../components/Meta";
+import Header from "../../components/Header";
+import bgImg from "../../assets/images/blogs-background.jpg";
+import BlogList from "../../components/BlogList";
+import BlogAside from "../../components/Blog Aside/";
 
 const BlogPageContainer = styled.main`
   width: 100%;
@@ -28,7 +30,24 @@ const BlogLayout = styled.div`
   }
 `;
 
-const blogs = ({ bloglist }) => {
+const graphcms = new GraphQLClient(process.env.GRAPHQL_API_ENDPOINT);
+
+const QUERY = gql`
+  {
+    posts {
+      id
+      title
+      datePublished
+      slug
+      coverPhoto {
+        url
+      }
+    }
+  }
+`;
+
+const blogs = ({ posts }) => {
+  console.log(process.env.GRAPHQL_API_ENDPOINT);
   const pages = [{ page: "Home", link: "/" }];
   return (
     <>
@@ -36,7 +55,7 @@ const blogs = ({ bloglist }) => {
       <Header title="Blogs" pages={pages} page="Blogs" bgImg={bgImg} />
       <BlogPageContainer>
         <BlogLayout>
-          <BlogList blogs={bloglist} />
+          <BlogList blogs={posts} />
           <BlogAside />
         </BlogLayout>
       </BlogPageContainer>
@@ -44,15 +63,15 @@ const blogs = ({ bloglist }) => {
   );
 };
 
-export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/blogs`);
-  const bloglist = await res.json();
+export async function getStaticProps() {
+  const { posts } = await graphcms.request(QUERY);
 
   return {
     props: {
-      bloglist,
+      posts,
     },
+    revalidate: 10,
   };
-};
+}
 
 export default blogs;

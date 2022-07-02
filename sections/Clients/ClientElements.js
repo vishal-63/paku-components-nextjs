@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #eff1f7;
+  background-color: var(--blue-shade-1);
   width: 100%;
   padding: 3.125rem 0;
   display: flex;
@@ -77,7 +77,7 @@ export const ClientInfo = styled.div`
 export const ClientName = styled.p`
   font-size: 1.25rem;
   font-family: "Montserrat", sans-serif;
-  color: #151515;
+  color: var(--black);
 `;
 
 export const ClientSubtitle = styled.p`
@@ -95,7 +95,7 @@ export const ClientContent = styled.div`
 
 export const ClientIcon = styled.div`
   transform: rotateY(180deg);
-  color: #3a7bd5;
+  color: var(--blue-shade-5);
   font-size: 2rem;
   margin-left: 1rem;
 `;

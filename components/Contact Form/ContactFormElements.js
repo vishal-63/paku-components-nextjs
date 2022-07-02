@@ -18,7 +18,7 @@ export const ContactFormWrapper = styled.div`
 `;
 
 export const ContactFormTitle = styled.h2`
-  color: #0a3443;
+  color: var(--primary-blue);
   font-size: 1.5rem;
   padding: 1rem 0 0 2rem;
   text-transform: uppercase;

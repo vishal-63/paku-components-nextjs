@@ -1,6 +1,5 @@
 import Meta from "../components/Meta";
 import Herosection from "../sections/Hero";
-import { SliderData } from "../sections/Hero/SliderData";
 import Infosection from "../sections/Info";
 import ContactSection from "../sections/Contact";
 
@@ -9,7 +8,7 @@ export default function Home() {
     <>
       <Meta />
       <main>
-        <Herosection slides={SliderData} />
+        <Herosection />
         <Infosection />
         <ContactSection />
       </main>

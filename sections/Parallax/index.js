@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Parallax } from "react-parallax";
 import {
   ParallaxContent,

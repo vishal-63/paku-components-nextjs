@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Link from "next/link";
 
 export const NavbarContainer = styled.nav`
   background-color: ${({ scrollNav }) => (scrollNav ? "#fff" : "transparent")};
@@ -13,8 +12,13 @@ export const NavbarContainer = styled.nav`
   width: 100%;
   box-shadow: ${({ scrollNav }) =>
     scrollNav ? "0 5px 20px rgba(0,0,0,0.2)" : ""};
-  top: ${({ scrollNav }) => (scrollNav ? "0" : "")};
-  position: ${({ scrollNav }) => (scrollNav ? "fixed" : "relative")};
+  top: 0;
+  position: fixed;
+  transition: height 0.2s ease;
+
+  @media (min-width: 540px) {
+    height: ${({ scrollNav }) => (scrollNav ? "80px" : "120px")};
+  }
 `;
 
 export const NavWrapper = styled.div`
@@ -24,11 +28,12 @@ export const NavWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: 0 1rem;
   padding: 0 1rem;
 
-  @media (min-width: 769px) {
-    max-width: 1200px;
+  @media (min-width: 540px) {
+    margin: 0 4rem;
+    padding: 0 1rem;
   }
 `;
 
@@ -38,7 +43,6 @@ export const NavTitle = styled.span`
   align-items: center;
   text-decoration: none;
   transition: all 0.2s ease;
-  /* transform: translateY(10px); */
 `;
 
 export const MobileIcon = styled.div`
@@ -46,7 +50,7 @@ export const MobileIcon = styled.div`
   transition: 0.3s all ease-in-out;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #00b4d8;
+  color: #262262;
   z-index: 10;
   transition: all 0.2s ease;
   display: ${({ isOpen }) => (isOpen ? "none" : "block")};
@@ -60,7 +64,7 @@ export const CloseIcon = styled.div`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   font-size: 1.8rem;
   cursor: pointer;
-  color: #00b4d8;
+  color: #262262;
   transition: all 0.2s ease;
   height: 50%;
 
@@ -76,8 +80,8 @@ export const NavMenu = styled.div`
   list-style: none;
   text-align: center;
   padding-left: 3rem;
-  color: ${({ scrollNav }) => (scrollNav ? "#01194f" : "#00b4d8")};
-  border-color: ${({ scrollNav }) => (scrollNav ? "#01194f" : "#00b4d8")};
+  color: ${({ scrollNav }) => (scrollNav ? "#01194f" : "#262262")};
+  border-color: ${({ scrollNav }) => (scrollNav ? "#01194f" : "#262262")};
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -98,16 +102,17 @@ export const NavMenu = styled.div`
 export const NavLinks = styled.div`
   color: inherit;
   margin: 0 10px;
-  padding: 0.5rem 0;
-  font-weight: 500;
+  padding: 0.75rem 0;
+  font-weight: 600;
   letter-spacing: 1px;
-  border: 1px solid transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
   text-decoration: none;
   transition: all 0.2s ease-in;
   cursor: pointer;
 
   & > a {
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 1.5rem;
   }
 
   &:hover {
@@ -142,7 +147,7 @@ export const ProductCategoriesList = styled.ul`
 
   &.desktop-menu {
     position: absolute;
-    top: 65px;
+    top: 88px;
     transform: translateX(-1.2rem);
     visibility: hidden;
   }
@@ -153,7 +158,7 @@ export const ProductCategoriesList = styled.ul`
 `;
 
 export const ProductCategory = styled.div`
-  color: #00b4d8;
+  color: #262262;
   cursor: pointer;
   padding: 0.5rem 0;
   text-align: left;

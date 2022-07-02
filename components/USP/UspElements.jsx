@@ -68,7 +68,7 @@ export const UspCard = styled.div`
 `;
 
 export const UspCardIcon = styled.div`
-  color: #00b4d8;
+  color: var(--blue-shade-5);
   font-size: 1.8rem;
   position: absolute;
   margin-top: -48px;

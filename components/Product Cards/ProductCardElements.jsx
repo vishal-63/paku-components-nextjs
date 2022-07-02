@@ -8,7 +8,7 @@ export const ProductCardsContainer = styled.div`
   margin: 3rem auto;
   padding: 3rem 0;
   width: 100%;
-  background-color: #eff1f7;
+  background-color: var(--blue-shade-1);
 
   @media (max-width: 900px) {
     margin-top: 30px;
@@ -62,7 +62,7 @@ export const ProductCard = styled.div`
 
   &::after {
     content: "";
-    background-color: #3a7bd5;
+    background-color: var(--blue-shade-5);
     width: 100%;
     height: 4px;
     position: absolute;

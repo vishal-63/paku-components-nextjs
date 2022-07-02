@@ -20,7 +20,7 @@ export const InfoWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 600px;
   margin-top: 2rem;
   padding: 0 1rem;
 
@@ -74,7 +74,9 @@ export const InfoSectionButton = styled.div`
     top: -2px;
     left: -2px;
     z-index: -1;
-    background: linear-gradient(to right, #04ccfc, #3a7bd5);
+    background: #262262;
+    background: -webkit-linear-gradient(0deg, #262262 0%, #4942bd 100%);
+    background: linear-gradient(0deg, #262262 0%, #4942bd 100%);
     opacity: 0;
     transition: all 0.2s ease-in;
 
@@ -97,12 +99,9 @@ export const InfoSectionButton = styled.div`
   }
 
   &.active {
-    background: linear-gradient(
-      120deg,
-      rgba(0, 212, 255, 1) 0%,
-      rgba(17, 92, 175, 1) 62%,
-      rgba(10, 81, 115, 1) 100%
-    );
+    background: #262262;
+    background: -webkit-linear-gradient(0deg, #262262 0%, #4942bd 100%);
+    background: linear-gradient(0deg, #262262 0%, #4942bd 100%);
     color: #fff;
     border: none;
   }

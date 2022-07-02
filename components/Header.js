@@ -17,7 +17,7 @@ const PageTitle = styled.div`
   font-size: 1.5rem;
   font-family: Helvetica, sans-serif;
   letter-spacing: 2px;
-  margin-top: ${({ scrollNav }) => (scrollNav ? "80px" : "")};
+  margin-top: ${({ scrollNav }) => (scrollNav ? "80px" : "120px")};
 
   @media (min-width: 768px) {
     font-size: 2rem;
@@ -36,7 +36,7 @@ const PageCrumb = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eff1f7;
+  background-color: var(--blue-shade-1);
   height: 3rem;
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
@@ -48,7 +48,7 @@ const PageCrumb = styled.div`
 `;
 
 const HomeLink = styled.span`
-  color: #3a7bd5;
+  color: var(--blue-shade-5);
   text-decoration: none;
 `;
 

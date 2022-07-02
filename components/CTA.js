@@ -45,7 +45,7 @@ const CtaBtn = styled.span`
   max-width: 200px;
   color: #fff;
   background-color: #fff;
-  color: #01194f;
+  color: var(--primary-blue);
   border-radius: 30px;
   border: 1px solid #fff;
   font-size: 1rem;
@@ -54,13 +54,13 @@ const CtaBtn = styled.span`
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s;
   text-decoration: none;
 
   &:hover {
     background-color: transparent;
     color: #fff;
-    transition: all 0.3s ease;
+    transition: all 0.2s;
   }
 
   @media (min-width: 541px) {

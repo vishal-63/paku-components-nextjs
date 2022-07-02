@@ -34,45 +34,37 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { AsideBoxTitle } from "../Blog Aside/BlogAsideElements.js";
 
 const Blog = ({ blog }) => {
+  const date = new Date(blog.datePublished);
+  const day = date.getDate();
+  const month = date.toLocaleString("default", { month: "long" });
   return (
     <BlogContainer>
       <ArticleContainer>
         <ArticleHeader>
-          <div style={{ display: "flex", margin: "0 -1rem" }}>
-            <HeaderList>
-              <Icon>
-                <BiComment />
-              </Icon>
-              {blog.comments}
-            </HeaderList>
-            <HeaderList>
-              <Icon>
-                <FaRegThumbsUp />
-              </Icon>
-              {blog.likes}
-            </HeaderList>
-          </div>
           <div style={{ display: "flex" }}>
             <Icon>
               <BsFillPersonFill />
             </Icon>
-            by {blog.author}
+            by Jeet Shah
           </div>
         </ArticleHeader>
         <ArticleDateContainer>
-          <ArticleDate>{blog.date}</ArticleDate>
-          <ArticleMonth>{blog.month}</ArticleMonth>
+          <ArticleDate>{day}</ArticleDate>
+          <ArticleMonth>{month}</ArticleMonth>
         </ArticleDateContainer>
         <ArticleTitle>{blog.title}</ArticleTitle>
-        <ArticlePara>{blog.para1}</ArticlePara>
         <Image
-          src={blog.img}
-          alt="small business"
+          src={blog.coverPhoto.url}
+          alt={blog.title}
           style={{ marginTop: "2.25rem", width: "100%" }}
           layout="intrinsic"
+          width={720}
+          height={420}
         />
-        <ArticlePara>{blog.para2}</ArticlePara>
-        <QuoteContainer>
+        <ArticlePara dangerouslySetInnerHTML={{ __html: blog.article.html }}>
+          {/* {blog.article} */}
+        </ArticlePara>
+        {/* <QuoteContainer>
           <QuoteIcon>
             <svg
               style={{ display: "block", position: "relative" }}
@@ -100,8 +92,7 @@ const Blog = ({ blog }) => {
             </svg>
           </QuoteIcon>
           <Quote>{blog.quote}</Quote>
-        </QuoteContainer>
-        <ArticlePara>{blog.para3}</ArticlePara>
+        </QuoteContainer> */}
         <ArticleFooter>
           <ArticleFooterText>Share this post</ArticleFooterText>
           <div style={{ display: "flex", alignItems: "center" }}>
@@ -120,7 +111,7 @@ const Blog = ({ blog }) => {
           </div>
         </ArticleFooter>
       </ArticleContainer>
-      <RecentPostsContainer>
+      {/* <RecentPostsContainer>
         <AsideBoxTitle>Recent Posts</AsideBoxTitle>
         <RecentPostWrapper>
           <Link href="/blog/[id]" as={`/blog/${blog.recentPost1}`}>
@@ -190,7 +181,7 @@ const Blog = ({ blog }) => {
             </RecentPost>
           </Link>
         </RecentPostWrapper>
-      </RecentPostsContainer>
+      </RecentPostsContainer> */}
     </BlogContainer>
   );
 };

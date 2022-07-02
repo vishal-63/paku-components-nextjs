@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../assets/images/logo-copy.png";
 import { FaTimes } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+
+import logo from "../../assets/images/logo.png";
+
 import {
   MdKeyboardArrowDown,
   MdKeyboardArrowRight,
@@ -35,7 +37,7 @@ const Navbar = () => {
   const toggleCategories = () => setCategoryOpen(!categoryOpen);
 
   const changeNav = () => {
-    window.scrollY >= 35 ? setScrollNav(true) : setScrollNav(false);
+    window.scrollY > 0 ? setScrollNav(true) : setScrollNav(false);
   };
 
   useEffect(() => {
@@ -51,8 +53,8 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt="Paku Components Logo"
-                width="120"
-                height="120"
+                width={scrollNav ? "90" : "120"}
+                height={scrollNav ? "52.8" : "70.4"}
               />
             </NavTitle>
           </Link>
@@ -172,7 +174,7 @@ const Navbar = () => {
                 src={logo}
                 alt="Paku Components Logo"
                 width="100"
-                height="100"
+                height="59"
               />
             </NavTitle>
           </Link>
