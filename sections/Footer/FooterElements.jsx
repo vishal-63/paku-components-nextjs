@@ -1,22 +1,19 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.section`
+export const FooterContainer = styled.footer`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #0f0f0f;
+  background-color: var(--blue-shade-7);
 `;
 
 export const FooterWrapper = styled.div`
-  width: 85%;
+  width: 90%;
   margin: 2rem auto;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
-
-  @media (max-width: 1100px) {
-    width: 90%;
-  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -24,51 +21,52 @@ export const FooterWrapper = styled.div`
   }
 
   @media (max-width: 540px) {
-    flex-direction: column;
     margin: 1rem;
-    width: 90%;
+    width: auto;
     align-items: flex-start;
   }
 `;
 
-export const FooterLogo = styled.div`
-  max-height: 120px;
-  width: auto;
-`;
-
 export const FooterSectionWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: var(--cream);
 
   @media (max-width: 540px) {
     margin: 0.75rem 0;
+    font-size: 0.7rem;
   }
 `;
 
 export const FooterIcon = styled.div`
-  font-size: 1.7rem;
-  color: #a6a6a6;
-  margin: 0 10px;
-  align-self: center;
-  display: flex;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
   transition: all 0.3s ease;
   cursor: pointer;
-
-  &:hover {
-    color: #00b4d8;
-    transition: all 0.3s ease;
-  }
 
   @media (max-width: 540px) {
     margin: 0 20px 0 0;
   }
 `;
 
+export const FooterAddress = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+
+  .footer-text {
+    max-width: 180px;
+    transition: all 0.3s ease;
+  }
+`;
+
 export const FooterText = styled.a`
-  font-size: 0.7rem;
-  color: #666;
-  max-width: 160px;
+  /* max-width: 180px; */
   transition: all 0.3s ease;
   cursor: pointer;
   text-decoration: none;
@@ -79,19 +77,8 @@ export const FooterText = styled.a`
   }
 `;
 
-export const FooterContacts = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  & div:nth-child(1) {
-    padding-bottom: 5px;
-  }
-`;
-
 export const CopyRightWrapper = styled.div`
-  background-color: #000;
+  background-color: var(--blue-shade-8);
   padding: 1rem 0;
   display: flex;
   justify-content: center;

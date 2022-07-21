@@ -29,6 +29,7 @@ import {
 
 const Navbar = () => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [mobileDevice, setMobileDevice] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
 
@@ -40,8 +41,23 @@ const Navbar = () => {
     window.scrollY > 0 ? setScrollNav(true) : setScrollNav(false);
   };
 
+  const setImg = () => {
+    if (window.innerWidth > 768) {
+      setMobileDevice(false);
+    } else {
+      setMobileDevice(true);
+    }
+  };
+
   useEffect(() => {
+    setImg();
     window.addEventListener("scroll", changeNav);
+    window.addEventListener("resize", setImg);
+
+    return () => {
+      window.removeEventListener("scroll", changeNav);
+      window.removeEventListener("resize", setImg);
+    };
   }, []);
 
   return (
@@ -53,8 +69,8 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt="Paku Components Logo"
-                width={scrollNav ? "90" : "120"}
-                height={scrollNav ? "52.8" : "70.4"}
+                width={scrollNav ? "90" : mobileDevice ? "90" : "120"}
+                height={scrollNav ? "52.8" : mobileDevice ? "52.8" : "72.4"}
               />
             </NavTitle>
           </Link>
@@ -157,15 +173,17 @@ const Navbar = () => {
           </NavMenu>
         </NavWrapper>
       </NavbarContainer>
+
+      {/* Mobile Navbar */}
       <MobileDrawer isOpen={isOpen}>
         <div
           style={{
-            width: "100%",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            maxHeight: "80px",
+            height: "80px",
             padding: "0 1rem",
+            margin: "0 1rem",
           }}
         >
           <Link href="/">
@@ -173,8 +191,8 @@ const Navbar = () => {
               <Image
                 src={logo}
                 alt="Paku Components Logo"
-                width="100"
-                height="59"
+                width="90"
+                height="52.8"
               />
             </NavTitle>
           </Link>

@@ -97,8 +97,10 @@ const ContactForm = ({ page }) => {
   };
   return (
     <ContactFormWrapper>
-      <ContactFormTitle>Get in touch</ContactFormTitle>
-      <Form className={page === "contact" ? "contact-page" : ""}>
+      <ContactFormTitle className={page === "contact" && "contact-page"}>
+        Get in touch
+      </ContactFormTitle>
+      <Form className={page === "contact" && "contact-page"}>
         <NameEmailWrapper>
           <ContactFormInput
             type="text"

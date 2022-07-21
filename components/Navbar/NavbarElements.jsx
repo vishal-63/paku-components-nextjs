@@ -80,8 +80,8 @@ export const NavMenu = styled.div`
   list-style: none;
   text-align: center;
   padding-left: 3rem;
-  color: ${({ scrollNav }) => (scrollNav ? "#01194f" : "#262262")};
-  border-color: ${({ scrollNav }) => (scrollNav ? "#01194f" : "#262262")};
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -91,8 +91,8 @@ export const NavMenu = styled.div`
     flex-direction: column;
     display: flex;
     padding-left: 0;
-    color: #01194f;
-    border-color: #01194f;
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
     align-items: flex-start;
     padding: 0.5rem 0;
     margin-right: 10px;
@@ -172,7 +172,7 @@ export const ProductCategory = styled.div`
   &.mobile-link {
     text-transform: none;
     font-weight: 400;
-    color: #01194f;
+    color: var(--primary-blue);
   }
 
   &:last-child {
@@ -180,7 +180,7 @@ export const ProductCategory = styled.div`
   }
 
   &:hover {
-    color: #01194f;
+    color: var(--primary-blue);
   }
 
   &:hover ul {
@@ -210,6 +210,7 @@ export const MobileDrawer = styled.nav`
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   transition: all 0.25s ease;
   z-index: 11;
+  box-shadow: 0 0 25px #0302074f;
 `;
 
 export const OpenCategoriesSVG = styled.span`

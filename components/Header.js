@@ -17,9 +17,11 @@ const PageTitle = styled.div`
   font-size: 1.5rem;
   font-family: Helvetica, sans-serif;
   letter-spacing: 2px;
-  margin-top: ${({ scrollNav }) => (scrollNav ? "80px" : "120px")};
+  margin-top: 80px;
+  transition: all 0.2s ease;
 
   @media (min-width: 768px) {
+    margin-top: ${({ scrollNav }) => (scrollNav ? "80px" : "120px")};
     font-size: 2rem;
     padding-left: 20vw;
     padding-right: 20vw;
@@ -57,7 +59,7 @@ const Header = ({ title, page, pages, bgImg }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      window.scrollY >= 35 ? setScrollNav(true) : setScrollNav(false)
+      window.scrollY > 0 ? setScrollNav(true) : setScrollNav(false)
     );
   });
 

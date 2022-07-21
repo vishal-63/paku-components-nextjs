@@ -16,7 +16,9 @@ const GlobalStyle = createGlobalStyle`
   --blue-shade-5: #4942bd;
   --blue-shade-6: #262262;
   --blue-shade-7: #141235;
+  --blue-shade-8: #090716;
   --black: #030207;
+  --cream: #dedede;
   --primary-blue: #262262;
 }
 

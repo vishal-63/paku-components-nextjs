@@ -7,16 +7,14 @@ export const HerosectionSlider = styled.section`
   top: 0;
   width: 100vw;
   height: 100vh;
-  /* background-color: #040f23; */
 
-  /* @media (max-width: 540px) {
+  @media (max-width: 540px) {
     height: 98vh;
-  } */
+  }
 `;
 
 export const HeroImage = styled.img`
-  /* width: 100% !important; */
-  height: 100vh !important;
+  height: 100% !important;
   position: absolute !important;
   top: 0 !important;
   right: 0 !important;
@@ -24,39 +22,34 @@ export const HeroImage = styled.img`
   z-index: -1;
   user-select: none;
 
-  /* @media (max-width: 1024px) {
-    max-width: fit-content !important;
-    width: 1366px !important;
-    transform: translateX(-25%);
-  } */
-
-  /* @media (max-width: 767px) {
-    transform: translateX(-10%);
-  } */
-
-  @media (max-width: 540px) {
-    transform: translate(26%, 9%);
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto !important;
+    top: 80px !important;
   }
 `;
 
 export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-bottom: 5rem;
   margin-left: 2rem;
   margin-right: 1.5rem;
   height: 100%;
   color: var(--primary-blue);
 
-  @media (min-width: 540px) {
+  @media (min-width: 900px) {
+    justify-content: center;
     width: 40%;
+    padding-bottom: 0;
     margin-left: 5rem;
     margin-right: 0;
   }
 `;
 
 export const HeroTitle = styled(motion.h1)`
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-family: Helvetica, sans-serif;
   letter-spacing: -1px;
   line-height: 1.25;
@@ -67,10 +60,6 @@ export const HeroTitle = styled(motion.h1)`
   column-gap: 1rem;
   overflow: hidden;
 
-  @media (max-width: 540px) {
-    text-shadow: 2px 2px 8px var(--blue-shade-6);
-  }
-
   @media (min-width: 540px) {
     font-size: 3rem;
   }
@@ -78,12 +67,12 @@ export const HeroTitle = styled(motion.h1)`
 
 export const HeroSubtitle = styled(motion.p)`
   font-family: Helvetica, sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.3;
 
-  @media (max-width: 540px) {
-    text-shadow: 2px 2px 8px var(--blue-shade-7);
+  @media (min-width: 540px) {
+    font-size: 1.35rem;
   }
 `;
 
@@ -107,10 +96,10 @@ const bounceAlpha = keyframes`
 `;
 
 export const HeroLink = styled(motion.a)`
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #fff;
   background-color: var(--primary-blue);
-  padding: 0.6rem 1.5rem;
+  padding: 0.4rem 1rem;
   border: none;
   border-radius: 30px;
   box-shadow: 2px 2px 10px var(--blue-shade-2);
@@ -119,6 +108,11 @@ export const HeroLink = styled(motion.a)`
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  @media (min-width: 540px) {
+    font-size: 1.25rem;
+    padding: 0.6rem 1.5rem;
+  }
 
   & span {
     align-items: center;

@@ -10,25 +10,23 @@ import {
   Arrows,
 } from "./HeroElements";
 
-import img from "../../assets/images/Banner1.svg";
+import landscapeImg from "../../assets/images/landscape-banner.svg";
+import portraitImg from "../../assets/images/portrait-banner.svg";
 import Button from "../../components/Button";
 
 const container = {
   animate: {
     transition: {
       staggerChildren: 0.35,
-      // delayChildren: 1,
     },
   },
 };
 
 const item = {
   initial: {
-    // opacity: 0,
     y: 135,
   },
   animate: {
-    // opacity: 1,
     y: 0,
     transition: {
       ease: [0.53, -0.27, 0.63, 1.29],
@@ -39,18 +37,37 @@ const item = {
 
 const Herosection = () => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [imgSrc, setImgSrc] = useState(portraitImg.src);
+  const [mobileDevice, setMobileDevice] = useState(true);
 
   const changeNav = () => {
     window.scrollY > 0 ? setScrollNav(true) : setScrollNav(false);
   };
 
+  const setImg = () => {
+    if (window.innerWidth > 768) {
+      setMobileDevice(false);
+      setImgSrc(landscapeImg.src);
+    } else {
+      setMobileDevice(true);
+      setImgSrc(portraitImg.src);
+    }
+  };
+
   useEffect(() => {
+    setImg();
     window.addEventListener("scroll", changeNav);
+    window.addEventListener("resize", setImg);
+
+    return () => {
+      window.removeEventListener("scroll", changeNav);
+      window.removeEventListener("resize", setImg);
+    };
   }, []);
 
   return (
     <HerosectionSlider scrollNav={scrollNav}>
-      <HeroImage src={img.src} alt="" />
+      <HeroImage src={imgSrc} alt="" />
       <HeroContent
         as={motion.div}
         variants={container}
@@ -64,7 +81,7 @@ const Herosection = () => {
         </div>
         <div
           style={{
-            marginTop: "2rem",
+            marginTop: `${mobileDevice ? "1.5rem" : "2rem"}`,
             height: "min-content",
             overflow: "hidden",
           }}
@@ -77,7 +94,7 @@ const Herosection = () => {
         <div
           style={{
             height: "64px",
-            marginTop: "3rem",
+            marginTop: `${mobileDevice ? "2rem" : "3rem"}`,
             overflowY: "hidden",
           }}
         >

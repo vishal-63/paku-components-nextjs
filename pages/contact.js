@@ -35,9 +35,11 @@ const ContactInfo = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 2rem;
 
   @media (min-width: 900px) {
     width: 50%;
+    margin-bottom: 0;
   }
 `;
 
@@ -57,7 +59,7 @@ const ContactInfoTitle = styled.h5`
 `;
 
 const ContactText = styled.p`
-  color: #00030a;
+  color: var(--primary-blue);
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   margin-top: 1rem;
