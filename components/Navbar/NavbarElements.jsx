@@ -204,13 +204,20 @@ export const RadiatorCategoriesList = styled.ul`
 `;
 
 export const MobileDrawer = styled.nav`
-  background-color: #fff;
   width: 100%;
+  height: 100vh;
   position: fixed;
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   transition: all 0.25s ease;
   z-index: 11;
-  box-shadow: 0 0 25px #0302074f;
+  background-color: #26226299;
+
+  & > div {
+    background-color: #fff;
+    top: ${({ isOpen }) => (isOpen ? "0" : "-15%")};
+    transition: all 0.25s ease;
+    transition-delay: 0.2s;
+  }
 `;
 
 export const OpenCategoriesSVG = styled.span`

@@ -13,7 +13,11 @@ export const FooterWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
+
+  & > div:first-child {
+    align-self: center;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -47,10 +51,6 @@ export const FooterIcon = styled.div`
   margin-bottom: 1rem;
   transition: all 0.3s ease;
   cursor: pointer;
-
-  @media (max-width: 540px) {
-    margin: 0 20px 0 0;
-  }
 `;
 
 export const FooterAddress = styled.div`

@@ -1,29 +1,77 @@
 import styled from "styled-components";
 
 export const CategoryContainer = styled.div`
-  width: fit-content;
-  background-color: #eff1f7;
-  margin: 3rem auto;
-  border: 1px solid #01194f;
+  width: 100%;
+  margin: 0 auto 3rem;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
 `;
 
 export const CategoryLink = styled.span`
   font-size: 0.75rem;
   font-family: Helvetica, sans-serif;
-  color: #3a7bd5;
+  color: #fff;
+  background-color: var(--blue-shade-7);
+  width: inherit;
+  padding: 1rem 0;
+  text-align: center;
   letter-spacing: 0.3px;
-  padding: 0.2rem 0.5rem;
-  border-right: 1px solid #01194f;
+  border-right: 1px solid var(--cream);
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  transform-origin: bottom;
+  position: relative;
+
+  &.active {
+    color: #262262;
+    background-color: #fff;
+    transform: scaleY(1.05);
+    transition: all 0.2s ease;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    background-color: var(--blue-shade-7);
+    transform: translate(-2.5%, calc(100% - 3px));
+    -webkit-transform: translate(-2.5%, calc(100% - 3px));
+    opacity: 0;
+    transition: all 0.2s ease 0.1s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--blue-shade-7);
+    bottom: 0;
+    left: 50%;
+    display: inline-block;
+    transform: translate(-50%, calc(100% - 0.5px));
+    -webkit-transform: translate(-50%, calc(100% - 0.5px));
+    opacity: 0;
+    transition: all 0.2s ease 0.1s;
+  }
+
+  &.active::before,
+  &.active::after {
+    opacity: 1;
+    transition: all 0.2s ease 0.1s;
+  }
 
   &:hover {
-    color: #01194f;
-    transition: color 0.2s ease;
+    transform: scaleY(1.05);
+    transition: all 0.2s ease;
   }
 
   &:last-child {
@@ -33,7 +81,7 @@ export const CategoryLink = styled.span`
   @media (min-width: 900px) {
     font-size: 1rem;
     letter-spacing: 0.7px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
   }
 `;
 

@@ -7,10 +7,6 @@ export const HerosectionSlider = styled.section`
   top: 0;
   width: 100vw;
   height: 100vh;
-
-  @media (max-width: 540px) {
-    height: 98vh;
-  }
 `;
 
 export const HeroImage = styled.img`
@@ -22,7 +18,7 @@ export const HeroImage = styled.img`
   z-index: -1;
   user-select: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 100%;
     height: auto !important;
     top: 80px !important;
@@ -33,7 +29,7 @@ export const HeroContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 5rem;
+  padding-bottom: 10%;
   margin-left: 2rem;
   margin-right: 1.5rem;
   height: 100%;

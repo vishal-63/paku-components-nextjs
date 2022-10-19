@@ -134,10 +134,25 @@ const Navbar = () => {
                 </ProductCategory>
 
                 <ProductCategory>
-                  <Link href="/products/top-tank">Top Tanks</Link>
-                </ProductCategory>
-                <ProductCategory>
-                  <Link href="/products/bottom-tank">Bottom Tanks</Link>
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Link href="/products/radiators">Top - Bottom</Link>
+                    <MdKeyboardArrowRight />
+                  </div>
+                  <RadiatorCategoriesList>
+                    <ProductCategory>
+                      <Link href="/products/top-tank">Top Tanks</Link>
+                    </ProductCategory>
+                    <ProductCategory>
+                      <Link href="/products/bottom-tank">Bottom Tanks</Link>
+                    </ProductCategory>
+                  </RadiatorCategoriesList>
                 </ProductCategory>
                 <ProductCategory>Cores</ProductCategory>
                 <ProductCategory>
@@ -176,95 +191,101 @@ const Navbar = () => {
 
       {/* Mobile Navbar */}
       <MobileDrawer isOpen={isOpen}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            height: "80px",
-            padding: "0 1rem",
-            margin: "0 1rem",
-          }}
-        >
-          <Link href="/">
-            <NavTitle>
-              <Image
-                src={logo}
-                alt="Paku Components Logo"
-                width="90"
-                height="52.8"
-              />
-            </NavTitle>
-          </Link>
-          <CloseIcon onClick={toggle} isOpen={isOpen}>
-            <FaTimes />
-          </CloseIcon>
+        <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              height: "80px",
+              padding: "0 1rem",
+              margin: "0 1rem",
+            }}
+          >
+            <Link href="/">
+              <NavTitle>
+                <Image
+                  src={logo}
+                  alt="Paku Components Logo"
+                  width="90"
+                  height="52.8"
+                />
+              </NavTitle>
+            </Link>
+            <CloseIcon onClick={toggle} isOpen={isOpen}>
+              <FaTimes />
+            </CloseIcon>
+          </div>
+
+          <NavMenu
+            scrollNav={scrollNav}
+            isOpen={isOpen}
+            className="mobile-menu"
+          >
+            <Link href="/about">
+              <NavLinks className="mobile-link">About</NavLinks>
+            </Link>
+
+            <NavLinks className="mobile-link">
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Link href="/products">Products</Link>
+
+                <OpenCategoriesSVG
+                  onClick={toggleCategories}
+                  categoryOpen={categoryOpen}
+                >
+                  <MdKeyboardArrowDown />
+                </OpenCategoriesSVG>
+
+                <CloseCategoriesSVG
+                  onClick={toggleCategories}
+                  categoryOpen={categoryOpen}
+                >
+                  <MdKeyboardArrowUp />
+                </CloseCategoriesSVG>
+              </div>
+              <ProductCategoriesList
+                className="mobile-menu"
+                categoryOpen={categoryOpen}
+              >
+                <ProductCategory className="mobile-link">
+                  <Link href="/products/radiators">Radiators</Link>
+                </ProductCategory>
+                <ProductCategory className="mobile-link">
+                  <Link href="/products/top-tank">Top Tanks</Link>
+                </ProductCategory>
+                <ProductCategory className="mobile-link">
+                  <Link href="/products/bottom-tank">Bottom Tanks</Link>
+                </ProductCategory>
+                <ProductCategory className="mobile-link">Cores</ProductCategory>
+                <ProductCategory className="mobile-link">
+                  Intercooler
+                </ProductCategory>
+                <ProductCategory className="mobile-link">
+                  Condensor
+                </ProductCategory>
+                <ProductCategory className="mobile-link">
+                  Fan Assembly
+                </ProductCategory>
+              </ProductCategoriesList>
+            </NavLinks>
+
+            <Link href="/blogs">
+              <NavLinks className="mobile-link">Blogs</NavLinks>
+            </Link>
+
+            <Link href="/contact">
+              <NavLinks className="mobile-link">Contact</NavLinks>
+            </Link>
+          </NavMenu>
         </div>
-
-        <NavMenu scrollNav={scrollNav} isOpen={isOpen} className="mobile-menu">
-          <Link href="/about">
-            <NavLinks className="mobile-link">About</NavLinks>
-          </Link>
-
-          <NavLinks className="mobile-link">
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <Link href="/products">Products</Link>
-
-              <OpenCategoriesSVG
-                onClick={toggleCategories}
-                categoryOpen={categoryOpen}
-              >
-                <MdKeyboardArrowDown />
-              </OpenCategoriesSVG>
-
-              <CloseCategoriesSVG
-                onClick={toggleCategories}
-                categoryOpen={categoryOpen}
-              >
-                <MdKeyboardArrowUp />
-              </CloseCategoriesSVG>
-            </div>
-            <ProductCategoriesList
-              className="mobile-menu"
-              categoryOpen={categoryOpen}
-            >
-              <ProductCategory className="mobile-link">
-                <Link href="/products/radiators">Radiators</Link>
-              </ProductCategory>
-              <ProductCategory className="mobile-link">
-                <Link href="/products/top-tank">Top Tanks</Link>
-              </ProductCategory>
-              <ProductCategory className="mobile-link">
-                <Link href="/products/bottom-tank">Bottom Tanks</Link>
-              </ProductCategory>
-              <ProductCategory className="mobile-link">Cores</ProductCategory>
-              <ProductCategory className="mobile-link">
-                Intercooler
-              </ProductCategory>
-              <ProductCategory className="mobile-link">
-                Condensor
-              </ProductCategory>
-              <ProductCategory className="mobile-link">
-                Fan Assembly
-              </ProductCategory>
-            </ProductCategoriesList>
-          </NavLinks>
-
-          <Link href="/blogs">
-            <NavLinks className="mobile-link">Blogs</NavLinks>
-          </Link>
-
-          <Link href="/contact">
-            <NavLinks className="mobile-link">Contact</NavLinks>
-          </Link>
-        </NavMenu>
       </MobileDrawer>
     </>
   );

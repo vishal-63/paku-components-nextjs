@@ -30,7 +30,8 @@ const Footer = () => {
               #96, 1st Floor, 1st Main, 4th Cross, New Timber Yard Layout 560020
             </div>
             <div className="footer-text">
-              #96, 1st Floor, 1st Main, 4th Cross, New Timber Yard Layout 560020
+              B-10, Ratna Business House, Changodar-Sanathal Highway, Ahmedabad
+              - 382110
             </div>
           </FooterAddress>
         </FooterSectionWrapper>

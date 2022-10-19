@@ -45,7 +45,7 @@ const Herosection = () => {
   };
 
   const setImg = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 900) {
       setMobileDevice(false);
       setImgSrc(landscapeImg.src);
     } else {

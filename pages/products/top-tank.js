@@ -61,26 +61,35 @@ class TopTank extends React.Component {
 
         <IKContext urlEndpoint="https://ik.imagekit.io/pakucomponents/top">
           <CategoryContainer>
-            <CategoryLink onClick={() => this.setState({ segment: "car" })}>
-              Car
-            </CategoryLink>
             <CategoryLink
-              onClick={() => this.setState({ segment: "commercial" })}
-            >
-              Commercial
-            </CategoryLink>
-            <CategoryLink
+              className={this.state.segment === "earthmover" && "active"}
               onClick={() => this.setState({ segment: "earthmover" })}
             >
               Earthmovers
             </CategoryLink>
             <CategoryLink
+              onClick={() => this.setState({ segment: "car" })}
+              className={this.state.segment === "car" && "active"}
+            >
+              Car
+            </CategoryLink>
+            <CategoryLink
+              onClick={() => this.setState({ segment: "commercial" })}
+              className={this.state.segment === "commercial" && "active"}
+            >
+              Commercial
+            </CategoryLink>
+            <CategoryLink
+              onClick={() => this.setState({ segment: "tractor" })}
+              className={this.state.segment === "tractor" && "active"}
+            >
+              Tractors
+            </CategoryLink>
+            <CategoryLink
               onClick={() => this.setState({ segment: "generator" })}
+              className={this.state.segment === "generator" && "active"}
             >
               Generators
-            </CategoryLink>
-            <CategoryLink onClick={() => this.setState({ segment: "tractor" })}>
-              Tractors
             </CategoryLink>
           </CategoryContainer>
 
