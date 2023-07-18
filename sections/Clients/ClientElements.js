@@ -71,7 +71,7 @@ export const ClientHeader = styled.div`
 export const ClientInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1.5rem;
+  margin-left: 4.5rem;
 `;
 
 export const ClientName = styled.p`

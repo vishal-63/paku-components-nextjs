@@ -67,7 +67,7 @@ const Team = () => {
             </SocialLinkWrapper>
           </MemberDiv>
         </MemberCard>
-        <MemberCard>
+        {/* <MemberCard>
           <MemberDiv>
             <Image src={team3} alt="team-member-3" layout="intrinsic" />
             <MemberName>Vishal Shah</MemberName>
@@ -87,7 +87,7 @@ const Team = () => {
               </SocialLink>
             </SocialLinkWrapper>
           </MemberDiv>
-        </MemberCard>
+        </MemberCard> */}
       </TeamWrapper>
     </Container>
   );

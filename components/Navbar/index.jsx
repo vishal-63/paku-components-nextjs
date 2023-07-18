@@ -178,9 +178,9 @@ const Navbar = () => {
               </ProductCategoriesList>
             </NavLinks>
 
-            <NavLinks>
+            {/* <NavLinks>
               <Link href="/blogs">Blogs</Link>
-            </NavLinks>
+            </NavLinks> */}
 
             <NavLinks>
               <Link href="/contact">Contact</Link>
@@ -277,9 +277,9 @@ const Navbar = () => {
               </ProductCategoriesList>
             </NavLinks>
 
-            <Link href="/blogs">
+            {/* <Link href="/blogs">
               <NavLinks className="mobile-link">Blogs</NavLinks>
-            </Link>
+            </Link> */}
 
             <Link href="/contact">
               <NavLinks className="mobile-link">Contact</NavLinks>

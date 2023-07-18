@@ -24,9 +24,9 @@ const Clients = () => {
       <ClientWrapper data-aos="fade-up">
         <ClientCard>
           <ClientHeader>
-            <Image src={client1} alt="Client Image" layout="intrinsic" />
+            {/* <Image src={client1} alt="Client Image" layout="intrinsic" /> */}
             <ClientInfo>
-              <ClientName>Lalit Shah</ClientName>
+              <ClientName>Paras Shah</ClientName>
               <ClientSubtitle>Arihant Auto Agency</ClientSubtitle>
             </ClientInfo>
           </ClientHeader>
@@ -45,7 +45,7 @@ const Clients = () => {
 
         <ClientCard>
           <ClientHeader>
-            <Image src={client2} alt="Client Image" layout="intrinsic" />
+            {/* <Image src={client2} alt="Client Image" layout="intrinsic" /> */}
             <ClientInfo>
               <ClientName>Mahaveer Jain</ClientName>
               <ClientSubtitle>Reliance Radiators</ClientSubtitle>

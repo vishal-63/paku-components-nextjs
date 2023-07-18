@@ -49,13 +49,6 @@ const AboutInfo = () => {
       para2:
         "We do not aim to be known for selling more products than any other company, but to be know for delivering outstanding products. We are here to help you in covering all your requirements with a smile.",
     },
-    {
-      heading: "Building Business Relationships",
-      para1:
-        "We aim to achieve strong and healthy business relationships by serving our clients and helping in their success by responding to their demands. ",
-      para2:
-        "We do not aim to be known for selling more products than any other company, but to be know for delivering outstanding products. We are here to help you in covering all your requirements with a smile.",
-    },
   ];
 
   if (!Array.isArray(InfoData) || InfoData.length <= 0) {
@@ -85,13 +78,6 @@ const AboutInfo = () => {
             id="3"
             className="button"
             onClick={() => changeBackground("3")}
-          >
-            Our Goal
-          </InfoSectionButton>
-          <InfoSectionButton
-            id="4"
-            className="button"
-            onClick={() => changeBackground("4")}
           >
             Our Goal
           </InfoSectionButton>

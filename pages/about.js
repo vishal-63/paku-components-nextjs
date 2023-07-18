@@ -14,7 +14,7 @@ const About = () => {
       <Header title="About" pages={pages} page="About" bgImg={bgImg} />
       <main>
         <AboutInfo />
-        <Team />
+        {/* <Team /> */}
         <ParallaxContainer />
         <Clients />
       </main>
